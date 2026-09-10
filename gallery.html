@@ -25,6 +25,19 @@
     .gallery-back a{color:#111;font-size:11px;font-weight:800;letter-spacing:1.5px}
     @media(max-width:950px){.gallery-page-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:560px){.gallery-page{padding:54px 0 65px}.gallery-page-grid{grid-template-columns:1fr}.gallery-page-item img{height:270px}.gallery-intro h1{font-size:48px}}
+
+    .gallery-page-item{border:0;padding:0;text-align:left;font:inherit;cursor:pointer;width:100%}
+    .gallery-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:9999;display:none;align-items:center;justify-content:center;padding:70px 90px}
+    .gallery-lightbox.open{display:flex}
+    .lightbox-content{max-width:min(1100px,88vw);max-height:84vh;text-align:center}
+    .lightbox-content img{display:block;max-width:100%;max-height:76vh;width:auto;height:auto;object-fit:contain;margin:auto;box-shadow:0 20px 70px rgba(0,0,0,.45)}
+    .lightbox-caption{color:#fff;font:500 18px var(--serif);margin-top:16px}
+    .lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;background:transparent;border:0;color:#fff;cursor:pointer;z-index:2}
+    .lightbox-close{top:22px;right:30px;font-size:42px;line-height:1}
+    .lightbox-prev,.lightbox-next{top:50%;transform:translateY(-50%);font-size:34px;padding:20px;color:var(--gold2)}
+    .lightbox-prev{left:24px}.lightbox-next{right:24px}
+    .lightbox-close:hover,.lightbox-prev:hover,.lightbox-next:hover{color:#fff}
+    @media(max-width:560px){.gallery-lightbox{padding:60px 45px}.lightbox-prev,.lightbox-next{font-size:25px;padding:10px}.lightbox-prev{left:4px}.lightbox-next{right:4px}.lightbox-close{right:15px;top:14px;font-size:34px}.lightbox-caption{font-size:16px}}
   </style>
 </head>
 <body>
@@ -46,22 +59,48 @@
         <p>A look at some of the homes, spaces, and custom projects we've built and transformed.</p>
       </div>
       <div class="gallery-page-grid">
-        <div class="gallery-page-item"><img src="assets/work-media-wall.jpg" alt="Custom media wall project"><div class="gallery-page-caption">Custom Media Wall</div></div>
-        <div class="gallery-page-item"><img src="assets/work-shower-remodel.jpg" alt="Bathroom remodeling project"><div class="gallery-page-caption">Bathroom Remodeling</div></div>
-        <div class="gallery-page-item"><img src="assets/work-kitchen-remodel.jpg" alt="Kitchen remodeling project"><div class="gallery-page-caption">Kitchen Remodeling</div></div>
-        <div class="gallery-page-item"><img src="assets/work-microwave-cabinet.jpg" alt="Custom kitchen cabinet project"><div class="gallery-page-caption">Custom Cabinet Work</div></div>
-        <div class="gallery-page-item"><img src="assets/service-trim-design.png" alt="Custom trim design project"><div class="gallery-page-caption">Trim Design</div></div>
-        <div class="gallery-page-item"><img src="assets/work-screened-porch.jpg" alt="Screened porch project"><div class="gallery-page-caption">Screened Porch</div></div>
-        <div class="gallery-page-item"><img src="assets/work-deck-complete.jpg" alt="Custom deck project"><div class="gallery-page-caption">Custom Deck</div></div>
-        <div class="gallery-page-item"><img src="assets/work-deck-progress.jpg" alt="Deck construction in progress"><div class="gallery-page-caption">Deck — In Progress</div></div>
-        <div class="gallery-page-item"><img src="assets/work-deck-finished.jpg" alt="Completed deck and porch project"><div class="gallery-page-caption">Completed Deck &amp; Porch</div></div>
+        <button class="gallery-page-item" type="button" data-full="assets/work-media-wall.jpg" data-caption="Custom Media Wall"><img src="assets/work-media-wall.jpg" alt="Custom media wall project"><span class="gallery-page-caption">Custom Media Wall</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/work-shower-remodel.jpg" data-caption="Bathroom Remodeling"><img src="assets/work-shower-remodel.jpg" alt="Bathroom remodeling project"><span class="gallery-page-caption">Bathroom Remodeling</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/work-kitchen-remodel.jpg" data-caption="Kitchen Remodeling"><img src="assets/work-kitchen-remodel.jpg" alt="Kitchen remodeling project"><span class="gallery-page-caption">Kitchen Remodeling</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/work-microwave-cabinet.jpg" data-caption="Custom Cabinet Work"><img src="assets/work-microwave-cabinet.jpg" alt="Custom kitchen cabinet project"><span class="gallery-page-caption">Custom Cabinet Work</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/service-trim-design.png" data-caption="Trim Design"><img src="assets/service-trim-design.png" alt="Custom trim design project"><span class="gallery-page-caption">Trim Design</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/work-screened-porch.jpg" data-caption="Screened Porch"><img src="assets/work-screened-porch.jpg" alt="Screened porch project"><span class="gallery-page-caption">Screened Porch</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/work-deck-complete.jpg" data-caption="Custom Deck"><img src="assets/work-deck-complete.jpg" alt="Custom deck project"><span class="gallery-page-caption">Custom Deck</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/work-deck-progress.jpg" data-caption="Deck — In Progress"><img src="assets/work-deck-progress.jpg" alt="Deck construction in progress"><span class="gallery-page-caption">Deck — In Progress</span></button>
+        <button class="gallery-page-item" type="button" data-full="assets/work-deck-finished.jpg" data-caption="Completed Deck &amp; Porch"><img src="assets/work-deck-finished.jpg" alt="Completed deck and porch project"><span class="gallery-page-caption">Completed Deck &amp; Porch</span></button>
       </div>
       <div class="gallery-back"><a href="index.html">← BACK TO HOME</a></div>
     </div>
   </section>
+<div class="gallery-lightbox" id="galleryLightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close gallery">&times;</button>
+  <button class="lightbox-prev" type="button" aria-label="Previous photo">&#8592;</button>
+  <div class="lightbox-content">
+    <img id="lightboxImage" src="" alt="">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+  <button class="lightbox-next" type="button" aria-label="Next photo">&#8594;</button>
+</div>
 </main>
 
 <footer class="footer"><div class="container footer-main"><div class="footer-brand"><img src="assets/logo.png" alt="Familia Andino Home Solutions"><p>(919) 857-5032</p><p>gerald.andinohomesolutions@gmail.com</p><p>Raleigh, NC</p></div><div><h4>Quick Links</h4><a href="index.html">Home</a><a href="index.html#services">Services</a><a href="index.html#about">About Us</a><a href="gallery.html">Our Work</a><a href="index.html#contact">Contact</a></div><div><h4>Let's Build Something Together</h4><p>Get in touch today for a free estimate.</p><a class="gold-btn" href="index.html#contact">Get a Free Estimate <span>→</span></a></div></div><div class="footer-bottom">© 2026 Familia Andino Home Solutions. All rights reserved.</div></footer>
+<script>
+(function(){
+  const box=document.getElementById('galleryLightbox');
+  const image=document.getElementById('lightboxImage');
+  const caption=document.getElementById('lightboxCaption');
+  const items=[...document.querySelectorAll('.gallery-page-item')];
+  let current=0;
+  function show(i){current=(i+items.length)%items.length;const item=items[current];image.src=item.dataset.full;image.alt=item.querySelector('img').alt;caption.textContent=item.dataset.caption;box.classList.add('open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  function close(){box.classList.remove('open');box.setAttribute('aria-hidden','true');document.body.style.overflow='';image.src='';}
+  items.forEach((item,i)=>item.addEventListener('click',()=>show(i)));
+  document.querySelector('.lightbox-close').addEventListener('click',close);
+  document.querySelector('.lightbox-prev').addEventListener('click',()=>show(current-1));
+  document.querySelector('.lightbox-next').addEventListener('click',()=>show(current+1));
+  box.addEventListener('click',e=>{if(e.target===box)close();});
+  document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(current-1);if(e.key==='ArrowRight')show(current+1);});
+})();
+</script>
 <script src="script.js"></script>
 </body>
 </html>
