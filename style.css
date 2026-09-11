@@ -55,6 +55,8 @@
   align-items: center;
   gap: 38px;
   white-space: nowrap;
+  }
+
 .site-header .nav-right {
   position: absolute;
   left: auto;
