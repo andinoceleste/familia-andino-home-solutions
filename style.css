@@ -47,22 +47,26 @@
 .site-header .nav-left {
   position: absolute;
   left: 4.5%;
+  right: auto;
   top: 0;
+  width: auto;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  white-space: nowrap;
+.site-header .nav-right {
+  position: absolute;
+  left: auto;
+  right: 22%;
+  top: 0;
+  width: auto;
   height: 82px;
   display: flex;
   align-items: center;
   gap: 38px;
   white-space: nowrap;
 }
-
-.site-header .nav-right {
-  position: absolute;
-  right: 30%;
-  top: 0;
-  height: 82px;
-  display: flex;
-  align-items: center;
-  gap: 38px;
   white-space: nowrap;
 }
 
