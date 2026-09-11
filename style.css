@@ -94,3 +94,43 @@
   display: inline-block;
   white-space: nowrap;
 }
+/* FINAL HEADER POSITION */
+.site-header .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 82px;
+  display: flex;
+  align-items: center;
+}
+
+.site-header .nav-left {
+  position: absolute;
+  left: 4.5%;
+  top: 0;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.site-header .nav-right {
+  position: absolute;
+  right: 25%;
+  top: 0;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.site-header .header-actions {
+  position: absolute;
+  right: 4.5%;
+  top: 0;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
