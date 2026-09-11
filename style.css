@@ -86,7 +86,7 @@
   left: auto;
   display: flex;
   flex-direction: row;
-  gap: 38px;
+  gap: 0px;
 }
 
 .site-header .nav-left a,
