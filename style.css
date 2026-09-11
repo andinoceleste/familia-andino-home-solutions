@@ -73,3 +73,24 @@
   min-width: 220px;
   height: 52px;
 }
+.site-header .nav-left {
+  left: 4.5%;
+  right: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 38px;
+}
+
+.site-header .nav-right {
+  right: 24%;
+  left: auto;
+  display: flex;
+  flex-direction: row;
+  gap: 38px;
+}
+
+.site-header .nav-left a,
+.site-header .nav-right a {
+  display: inline-block;
+  white-space: nowrap;
+}
