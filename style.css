@@ -175,3 +175,49 @@
   display: inline-block;
   white-space: nowrap;
 }
+/* FINAL HEADER FIX */
+.site-header .nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 82px;
+}
+
+.site-header .nav-left {
+  position: absolute;
+  left: 4.5%;
+  top: 0;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  white-space: nowrap;
+}
+
+.site-header .nav-right {
+  position: absolute;
+  right: 32%;
+  top: 0;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  white-space: nowrap;
+}
+
+.site-header .header-actions {
+  position: absolute;
+  right: 4.5%;
+  top: 0;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  white-space: nowrap;
+}
+
+.site-header .nav a {
+  display: inline-block;
+  white-space: nowrap;
+}
