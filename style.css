@@ -503,28 +503,137 @@
 }
 
 @media(max-width:600px){
+
+  .footer-premium{
+    padding:45px 32px 0;
+    overflow:hidden;
+  }
+
   .footer-premium::after{
-    display:none;
+    display:block;
+    top:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    background:
+      linear-gradient(
+        rgba(8,9,9,.88),
+        rgba(8,9,9,.94)
+      ),
+      url("assets/hero-home.jpg") center center / cover no-repeat;
+    opacity:.75;
   }
 
   .footer-premium-inner{
     grid-template-columns:1fr;
+    gap:38px;
+    min-height:auto;
+    padding:0 0 40px;
   }
 
   .footer-brand{
     border-right:0;
+    min-height:auto;
+    padding:0;
+    align-items:center;
+    text-align:center;
+  }
+
+  .footer-premium .footer-brand img{
+    width:185px;
+    margin-bottom:22px;
+  }
+
+  .footer-tagline{
+    font-size:12px;
+    letter-spacing:3px;
+    line-height:1.8;
+    margin-bottom:15px;
+  }
+
+  .footer-description{
+    font-size:13px;
+    line-height:1.6;
+    max-width:320px;
+  }
+
+  .footer-description::before{
+    width:50px;
+    height:2px;
+    margin-bottom:15px;
+  }
+
+  .footer-links,
+  .footer-contact{
+    width:100%;
+  }
+
+  .footer-links h3,
+  .footer-contact h3{
+    font-size:22px;
+    margin-bottom:18px;
+  }
+
+  .footer-links{
+    gap:9px;
+  }
+
+  .footer-links a{
+    font-size:13px;
+  }
+
+  .footer-contact{
+    font-size:13px;
+  }
+
+  .footer-contact p{
+    margin-bottom:14px;
+  }
+
+  .footer-social{
+    margin-top:22px;
+    gap:12px;
+  }
+
+  .footer-social span{
+    width:42px;
+    height:42px;
   }
 
   .footer-cta{
-    grid-column:auto;
+    min-height:auto;
+    padding:25px 0 5px;
+    background:transparent !important;
+    border:0 !important;
+  }
+
+  .footer-cta h2{
+    font-size:30px;
+  }
+
+  .footer-cta .gold-btn{
+    width:100%;
+    text-align:center;
   }
 
   .footer-premium .footer-bottom{
     grid-template-columns:1fr;
+    gap:15px;
+    padding:20px 0 25px;
     text-align:center;
   }
 
   .footer-premium .footer-bottom span{
     text-align:center !important;
+    line-height:1.6;
   }
+
+  .footer-premium .footer-bottom span:nth-child(3){
+    order:3;
+  }
+
+  .footer-premium .footer-bottom span:nth-child(4){
+    order:4;
+  }
+
 }
