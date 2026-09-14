@@ -184,13 +184,17 @@
 }
 
 .footer-cta{
-  min-height:220px;
-  padding:35px;
-  background:linear-gradient(135deg,#171717,#0c0d0d);
+  min-height:275px;
+  padding:45px;
+  background:
+    linear-gradient(rgba(5,7,7,.58),rgba(5,7,7,.68)),
+    url("assets/hero-home.jpg") center center / cover no-repeat;
   border:1px solid #292929;
   display:flex;
   flex-direction:column;
   justify-content:center;
+  position:relative;
+  overflow:hidden;
 }
 
 .footer-eyebrow{
