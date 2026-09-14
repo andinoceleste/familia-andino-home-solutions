@@ -106,13 +106,13 @@
 }
 
 .footer-premium-inner{
-  max-width:1400px;
+  max-width:1500px;
   margin:0 auto;
   display:grid;
-  grid-template-columns:1.3fr .7fr 1fr 1.4fr;
-  gap:55px;
-  align-items:start;
-  padding-bottom:60px;
+  grid-template-columns:1.25fr .75fr 1fr 1.45fr;
+  gap:65px;
+  align-items:stretch;
+  padding-bottom:45px;
 }
 
 .footer-premium .footer-brand img{
