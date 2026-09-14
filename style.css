@@ -309,9 +309,14 @@
   top:0;
   right:0;
   bottom:65px;
-  width:38%;
+  width:42%;
   background:
-    linear-gradient(90deg,rgba(8,9,9,.15),rgba(8,9,9,.25)),
+    linear-gradient(
+      90deg,
+      rgba(8,9,9,.88),
+      rgba(8,9,9,.72),
+      rgba(8,9,9,.58)
+    ),
     url("assets/hero-home.jpg") center center / cover no-repeat;
   z-index:0;
 }
