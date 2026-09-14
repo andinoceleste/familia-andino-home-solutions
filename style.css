@@ -637,3 +637,54 @@
   }
 
 }
+}
+ 
+/* MOBILE HEADER - FINAL */
+@media (max-width:600px){
+
+  .site-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    padding:0 14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:50;
+  }
+
+  .site-header .nav-left,
+  .site-header .nav-right{
+    position:static;
+    width:auto;
+    height:82px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    white-space:nowrap;
+  }
+
+  .site-header .nav-left{
+    justify-content:center;
+  }
+
+  .site-header .nav-right{
+    justify-content:center;
+  }
+
+  .site-header .nav a{
+    font-size:10px;
+    letter-spacing:1.5px;
+    white-space:nowrap;
+  }
+
+  .site-header .header-actions{
+    display:none;
+  }
+
+  .site-header .menu-toggle{
+    display:none !important;
+  }
+}
