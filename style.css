@@ -792,3 +792,42 @@
     margin-left: 0 !important;
   }
 }
+/* FINAL MOBILE HEADER - ONE ROW */
+
+@media (max-width: 600px) {
+
+  .site-header {
+    height: 70px !important;
+    padding: 0 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  .site-header .menu-toggle,
+  .site-header .header-actions {
+    display: none !important;
+  }
+
+  .site-header .nav-left,
+  .site-header .nav-right {
+    display: contents !important;
+  }
+
+  .site-header .nav a {
+    position: static !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    height: 70px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 9px !important;
+    letter-spacing: 1.2px !important;
+    white-space: nowrap !important;
+  }
+
+}
