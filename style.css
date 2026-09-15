@@ -831,3 +831,121 @@
   }
 
 }
+/* GALLERY FOOTER - MOBILE FINAL */
+
+@media (max-width: 600px){
+
+  .gallery-footer{
+    width:100%;
+    box-sizing:border-box;
+    background:#080909;
+    color:#fff;
+    padding:45px 24px 0;
+    margin:0;
+  }
+
+  .gallery-footer-inner{
+    width:100%;
+    max-width:420px;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:28px;
+  }
+
+  .gallery-footer-brand{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .gallery-footer-brand img{
+    width:155px !important;
+    height:auto !important;
+    max-width:155px !important;
+    margin:0 auto 18px;
+  }
+
+  .gallery-footer-brand p{
+    margin:0;
+    color:#d8d8d8;
+    font-size:11px;
+    letter-spacing:2px;
+  }
+
+  .gallery-footer-contact{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    width:100%;
+  }
+
+  .gallery-footer-contact a,
+  .gallery-footer-contact span{
+    color:#f1f1f1;
+    text-decoration:none;
+    font-size:14px;
+    line-height:1.5;
+  }
+
+  .gallery-footer-links{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    width:100%;
+  }
+
+  .gallery-footer-links a{
+    color:#f1f1f1;
+    text-decoration:none;
+    font-size:13px;
+    letter-spacing:1px;
+  }
+
+  .gallery-footer-social{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    width:100%;
+  }
+
+  .gallery-footer-social a{
+    color:#c5a15a;
+    text-decoration:none;
+    font-size:13px;
+  }
+
+  .gallery-footer-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    max-width:330px;
+    min-height:58px;
+    box-sizing:border-box;
+    background:#e9b84f;
+    color:#111;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:700;
+    letter-spacing:.5px;
+    margin:0 auto;
+  }
+
+  .gallery-footer-bottom{
+    width:100%;
+    margin-top:35px;
+    padding:18px 0 22px;
+    border-top:1px solid rgba(255,255,255,.15);
+    text-align:center;
+    color:#777;
+    font-size:11px;
+    line-height:1.6;
+  }
+
+}
