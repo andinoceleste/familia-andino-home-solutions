@@ -1129,6 +1129,9 @@
   height:92px !important;
   object-fit:contain;
 }
+.about-page .header-logo{
+  display:none !important;
+}
 
 .about-hero{
   min-height:520px;
