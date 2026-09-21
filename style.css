@@ -1124,6 +1124,11 @@
   position:absolute;
   background:rgba(8,10,10,.45);
 }
+.about-page .header-logo img{
+  width:92px !important;
+  height:92px !important;
+  object-fit:contain;
+}
 
 .about-hero{
   min-height:520px;
