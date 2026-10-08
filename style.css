@@ -1494,3 +1494,25 @@
   .hero-premium{min-height:620px;height:620px}
   .hero-center{padding-top:52px}
 }
+
+
+/* HEADER SPACING FIX */
+@media(min-width:951px){
+  .site-header .nav-left{
+    left:3.2%;
+    gap:42px;
+  }
+  .site-header .nav-right{
+    right:255px;
+    gap:42px;
+  }
+  .site-header .header-actions{
+    right:3.2%;
+    gap:0;
+  }
+  .site-header .header-quote{
+    margin:0;
+    min-width:220px;
+    box-sizing:border-box;
+  }
+}
