@@ -1516,3 +1516,51 @@
     box-sizing:border-box;
   }
 }
+
+
+/* DEFINITIVE DESKTOP HEADER LAYOUT */
+@media(min-width:951px){
+  .site-header{
+    display:grid !important;
+    grid-template-columns:1fr auto auto !important;
+    align-items:center !important;
+    column-gap:48px !important;
+    padding:0 3.2% !important;
+    height:92px !important;
+    box-sizing:border-box !important;
+  }
+  .site-header .nav,
+  .site-header .nav-left,
+  .site-header .nav-right,
+  .site-header .header-actions{
+    position:static !important;
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    width:auto !important;
+    height:92px !important;
+    margin:0 !important;
+    transform:none !important;
+  }
+  .site-header .nav-left{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    gap:42px !important;
+  }
+  .site-header .nav-right{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:42px !important;
+  }
+  .site-header .header-actions{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+  }
+  .site-header .header-quote{
+    min-width:220px !important;
+    margin:0 !important;
+  }
+}
