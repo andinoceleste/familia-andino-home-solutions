@@ -1648,3 +1648,54 @@
    width:84px !important;height:66px !important;filter:brightness(.57) contrast(1.8) saturate(1.45) !important;
  }
 }
+
+/* APPROVED DARK LUXURY HEADER — homepage only */
+@media(min-width:951px){
+ body:has(.hero-premium) > .site-header{
+   background:#101111 !important;border-bottom:1px solid #302a20 !important;
+   box-shadow:none !important;backdrop-filter:none !important;
+   height:92px !important;padding:0 3.2% !important;
+ }
+ body:has(.hero-premium) > .site-header .header-brand-new{flex-basis:205px !important}
+ body:has(.hero-premium) > .site-header .header-brand-new img{
+   width:180px !important;height:84px !important;
+   filter:brightness(1.18) contrast(1.12) saturate(1.12) !important;
+ }
+ body:has(.hero-premium) > .site-header .nav a{
+   color:#f2eee7 !important;height:92px !important;
+   font-size:11px !important;letter-spacing:1.5px !important;
+ }
+ body:has(.hero-premium) > .site-header .nav a.active,
+ body:has(.hero-premium) > .site-header .nav a:hover{
+   color:#d9b578 !important;border-bottom-color:#d9b578 !important;
+ }
+ body:has(.hero-premium) > .site-header .header-actions{height:92px !important;flex-basis:205px !important}
+ body:has(.hero-premium) > .site-header .header-quote{
+   background:transparent !important;border:1px solid #cba465 !important;
+   color:#e7c58e !important;box-shadow:none !important;
+   padding:13px 17px !important;border-radius:0 !important;
+   font-size:10px !important;letter-spacing:1px !important;
+ }
+}
+@media(min-width:601px) and (max-width:950px){
+ body:has(.hero-premium) > .site-header{
+   background:#101111 !important;border-bottom:1px solid #302a20 !important;
+ }
+ body:has(.hero-premium) > .site-header .header-brand-new img{
+   filter:brightness(1.18) contrast(1.12) !important;
+ }
+ body:has(.hero-premium) > .site-header .nav a{color:#f2eee7 !important}
+}
+@media(max-width:600px){
+ body:has(.hero-premium) > .site-header{
+   background:#101111 !important;border-bottom:1px solid #302a20 !important;
+ }
+ body:has(.hero-premium) > .site-header .header-brand-new{
+   background:#101111 !important;
+ }
+ body:has(.hero-premium) > .site-header .header-brand-new img{
+   filter:brightness(1.18) contrast(1.12) !important;
+ }
+ body:has(.hero-premium) > .site-header .nav a{color:#f2eee7 !important}
+ body:has(.hero-premium) > .site-header .nav a.active{color:#d9b578 !important}
+}
