@@ -1751,3 +1751,19 @@
  body:has(.hero-premium) > .site-header .nav-right{left:116px !important;gap:16px !important}
  body:has(.hero-premium) > .site-header .header-actions{width:180px !important}
 }
+
+/* Enlarge only the small mountain logo in the homepage header */
+@media(min-width:951px){
+ body:has(.hero-premium) > .site-header .header-brand-new{
+   overflow:visible !important;z-index:2 !important;
+ }
+ body:has(.hero-premium) > .site-header .header-brand-new img{
+   transform:scale(1.48) !important;transform-origin:left center !important;
+   max-width:none !important;
+ }
+}
+@media(min-width:601px) and (max-width:950px){
+ body:has(.hero-premium) > .site-header .header-brand-new img{
+   transform:scale(1.18) !important;transform-origin:left center !important;
+ }
+}
