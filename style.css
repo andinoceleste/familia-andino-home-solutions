@@ -2081,3 +2081,41 @@ body:has(.hero-premium) > .site-header .header-quote{
  #services .service-body h3{font-size:23px}
  #services .service-body p{font-size:13px}
 }
+
+/* MODERN LUXURY — ABOUT US ONLY */
+#about.about-founder{background:#f5efe5 !important;color:#30251d}
+#about .about-split{grid-template-columns:50% 50%;min-height:790px}
+#about .about-left{background:#f5efe5 !important}
+#about .about-left-inner{width:min(680px,calc(100% - 125px));padding:100px 0}
+#about .about-left .eyebrow{color:#a87b41 !important;letter-spacing:4px;font-size:12px;margin-bottom:28px}
+#about .about-left h2{font-family:Georgia,'Times New Roman',serif;font-size:clamp(43px,4vw,68px);font-weight:400;line-height:1.07;letter-spacing:-1.6px;color:#30251d}
+#about .about-left h2 em{color:#b58a50 !important;font-weight:400}
+#about .about-left .gold-line{background:#b58a50;width:75px;height:2px;margin:30px 0}
+#about .about-left-inner>p:not(.eyebrow){font-family:Arial,sans-serif;color:#50473f;font-size:15px;line-height:1.82;margin:0 0 24px}
+#about .signature{font-family:Georgia,'Times New Roman',serif;color:#b58a50;font-size:43px;font-weight:400;margin-top:28px;transform:none}
+#about .signature-sub{color:#574b40;font-size:10px;letter-spacing:3px;margin-top:12px}
+#about .about-right{background:#27221d !important;padding:80px 10%}
+#about .founder-card{width:min(510px,100%);background:#302a24 !important;border:1px solid rgba(207,173,125,.45);border-radius:0;padding:49px 44px 39px;box-shadow:0 25px 60px rgba(0,0,0,.13)}
+#about .founder-card-title{color:#d6b17b;letter-spacing:3px;font-size:11px;margin-bottom:24px}
+#about .founder-badge{color:#d6b17b;border-color:#b58a50;width:58px;height:58px}
+#about .founder-card h3{font-family:Georgia,'Times New Roman',serif;color:#f3e9d9;font-size:39px;font-weight:400;line-height:1.15}
+#about .founder-card h4{color:#d2c4b2;font-size:13px;margin-top:8px;margin-bottom:25px}
+#about .founder-divider{background:rgba(206,169,115,.5);margin-bottom:12px}
+#about .founder-point{grid-template-columns:48px 1fr;gap:15px;padding:21px 0;border-bottom-color:rgba(255,255,255,.13)}
+#about .founder-icon{color:#c79b5c}
+#about .founder-point strong{color:#f5ede2;font-size:14px;font-weight:600}
+#about .founder-point small{color:#c8bdb0;font-size:12px;line-height:1.5}
+@media(max-width:950px){
+ #about .about-split{grid-template-columns:1fr}
+ #about .about-left-inner{width:min(700px,calc(100% - 56px));padding:75px 0}
+ #about .about-right{padding:75px 28px;min-height:auto}
+}
+@media(max-width:560px){
+ #about .about-left-inner{width:calc(100% - 40px);padding:58px 0}
+ #about .about-left h2{font-size:43px;letter-spacing:-1px}
+ #about .about-left-inner>p:not(.eyebrow){font-size:14px;line-height:1.75}
+ #about .signature{font-size:37px}
+ #about .about-right{padding:50px 20px}
+ #about .founder-card{padding:32px 25px 26px}
+ #about .founder-card h3{font-size:32px}
+}
