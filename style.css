@@ -1835,3 +1835,58 @@
  body:has(.hero-premium) > .site-header .nav-right{gap:17px !important}
  body:has(.hero-premium) > .site-header .header-actions{width:205px !important}
 }
+
+/* CLEAN CENTERED HEADER — final layout, no header logo */
+@media(min-width:951px){
+ body:has(.hero-premium) > .site-header{
+   position:relative !important;
+   display:flex !important;
+   justify-content:center !important;
+   align-items:center !important;
+   height:84px !important;
+   padding:0 34px !important;
+   background:#101111 !important;
+   border-bottom:1px solid rgba(210,171,105,.24) !important;
+ }
+ body:has(.hero-premium) > .site-header .nav-left,
+ body:has(.hero-premium) > .site-header .nav-right{
+   position:static !important;
+   left:auto !important;right:auto !important;top:auto !important;
+   transform:none !important;
+   display:flex !important;align-items:center !important;
+   flex:0 0 auto !important;
+   width:auto !important;height:84px !important;
+   justify-self:auto !important;
+   justify-content:center !important;
+   gap:34px !important;
+   margin:0 !important;
+   padding:0 !important;
+ }
+ body:has(.hero-premium) > .site-header .nav-left{margin-right:34px !important}
+ body:has(.hero-premium) > .site-header .nav a{
+   display:inline-flex !important;align-items:center !important;
+   height:84px !important;
+   font-size:11px !important;
+   letter-spacing:1.3px !important;
+   white-space:nowrap !important;
+   padding:0 !important;
+ }
+ body:has(.hero-premium) > .site-header .header-actions{
+   position:absolute !important;right:34px !important;top:0 !important;
+   display:flex !important;align-items:center !important;justify-content:flex-end !important;
+   height:84px !important;width:auto !important;margin:0 !important;
+ }
+ body:has(.hero-premium) > .site-header .header-quote{
+   padding:13px 17px !important;
+   border:1px solid #cba465 !important;
+   color:#e7c58e !important;background:transparent !important;
+ }
+}
+@media(min-width:951px) and (max-width:1240px){
+ body:has(.hero-premium) > .site-header .nav-left,
+ body:has(.hero-premium) > .site-header .nav-right{gap:17px !important}
+ body:has(.hero-premium) > .site-header .nav-left{margin-right:17px !important}
+ body:has(.hero-premium) > .site-header .nav a{font-size:10px !important}
+ body:has(.hero-premium) > .site-header .header-actions{right:16px !important}
+ body:has(.hero-premium) > .site-header .header-quote{font-size:9px !important;padding:11px !important}
+}
