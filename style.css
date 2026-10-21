@@ -1958,3 +1958,92 @@ body:has(.hero-premium) > .site-header .header-quote{
    color:#302821 !important;
  }
 }
+
+/* APPROVED CREAM SPLIT HERO — scoped only to first screen */
+.hero-premium.hero-editorial{
+ position:relative !important;display:block !important;isolation:isolate;
+ height:760px !important;min-height:760px !important;
+ background:#f5efe5 !important;color:#30251d !important;overflow:hidden !important;
+}
+.hero-editorial .hero-image{
+ position:absolute !important;inset:0 0 0 36% !important;z-index:0 !important;
+ background-image:url("assets/Golden%20Hour%20Mountain%20Modern%20Retreat.png") !important;
+ background-position:center center !important;background-size:cover !important;
+}
+.hero-editorial .hero-overlay{display:none !important}
+.hero-editorial .hero-cream-panel{
+ position:absolute;inset:0 auto 0 0;width:49%;z-index:1;
+ background:#f5efe5;clip-path:polygon(0 0,100% 0,79% 100%,0 100%);
+}
+.hero-editorial .hero-editorial-content{
+ position:relative;z-index:2;width:47%;max-width:750px;
+ height:100%;padding:50px 0 34px 5%;
+ display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+}
+.hero-editorial .hero-editorial-eyebrow{
+ color:#af834a;font:700 13px/1.9 Arial,sans-serif;
+ letter-spacing:4px;margin:0 0 22px;
+}
+.hero-editorial h1{
+ color:#30251d !important;font-family:Georgia,'Times New Roman',serif !important;
+ font-size:clamp(52px,5.35vw,92px) !important;line-height:.99 !important;
+ font-weight:400 !important;letter-spacing:-3px !important;
+ margin:0 0 23px !important;
+}
+.hero-editorial h1 em{color:#b58a50 !important;font-style:italic !important;font-weight:400}
+.hero-editorial .hero-editorial-rule{width:75px;height:2px;background:#b58a50;margin:0 0 21px}
+.hero-editorial .hero-editorial-description{
+ color:#554a41;font:400 17px/1.55 Arial,sans-serif;
+ max-width:485px;margin:0 0 24px;
+}
+.hero-editorial .hero-editorial-cta{
+ display:inline-flex;align-items:center;justify-content:space-between;gap:32px;
+ background:#b58a50;color:#fff !important;
+ font:700 12px Arial,sans-serif;letter-spacing:1.5px;
+ padding:20px 25px;text-decoration:none;border-radius:2px;
+}
+.hero-editorial .hero-editorial-cta:hover{background:#9c743f}
+.hero-editorial .hero-editorial-cta span{font-size:23px;font-weight:400}
+.hero-editorial .hero-editorial-features{
+ display:flex;align-items:center;gap:0;margin-top:38px;
+ max-width:550px;width:100%;
+}
+.hero-editorial .hero-editorial-features>div{
+ display:flex;align-items:center;gap:12px;
+ padding:0 19px;border-right:1px solid #d3c3ad;
+}
+.hero-editorial .hero-editorial-features>div:first-child{padding-left:0}
+.hero-editorial .hero-editorial-features>div:last-child{border-right:0;padding-right:0}
+.hero-editorial .hero-editorial-features span{font-size:28px;color:#b58a50;line-height:1}
+.hero-editorial .hero-editorial-features p{margin:0;display:flex;flex-direction:column;gap:3px}
+.hero-editorial .hero-editorial-features strong{font:700 11px Arial,sans-serif;letter-spacing:1.1px;color:#30251d}
+.hero-editorial .hero-editorial-features small{font:400 9px Arial,sans-serif;letter-spacing:.8px;color:#62574e;white-space:nowrap}
+@media(max-width:1100px){
+ .hero-premium.hero-editorial{height:680px !important;min-height:680px !important}
+ .hero-editorial .hero-cream-panel{width:61%}
+ .hero-editorial .hero-editorial-content{width:55%;padding-left:4%}
+ .hero-editorial h1{font-size:clamp(47px,5.5vw,70px) !important}
+ .hero-editorial .hero-editorial-description{font-size:14px}
+ .hero-editorial .hero-editorial-features>div{padding:0 9px;gap:6px}
+ .hero-editorial .hero-editorial-features span{font-size:21px}
+ .hero-editorial .hero-editorial-features small{font-size:8px}
+}
+@media(max-width:700px){
+ .hero-premium.hero-editorial{height:auto !important;min-height:0 !important;display:flex !important;flex-direction:column}
+ .hero-editorial .hero-image{
+   position:relative !important;inset:auto !important;order:2;
+   width:100%;height:340px;background-position:center !important;
+ }
+ .hero-editorial .hero-cream-panel{display:none}
+ .hero-editorial .hero-editorial-content{
+   order:1;width:100%;max-width:none;height:auto;
+   padding:56px 7% 45px;display:flex;
+ }
+ .hero-editorial .hero-editorial-eyebrow{font-size:10px;letter-spacing:2.8px;margin-bottom:19px}
+ .hero-editorial h1{font-size:clamp(46px,10vw,68px) !important;letter-spacing:-1.8px !important}
+ .hero-editorial .hero-editorial-description{font-size:14px;max-width:480px}
+ .hero-editorial .hero-editorial-cta{padding:17px 20px;font-size:10px}
+ .hero-editorial .hero-editorial-features{margin-top:32px;flex-wrap:wrap;gap:12px}
+ .hero-editorial .hero-editorial-features>div{padding:0 10px}
+ .hero-editorial .hero-editorial-features>div:first-child{padding-left:0}
+}
