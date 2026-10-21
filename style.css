@@ -1890,3 +1890,71 @@
  body:has(.hero-premium) > .site-header .header-actions{right:16px !important}
  body:has(.hero-premium) > .site-header .header-quote{font-size:9px !important;padding:11px !important}
 }
+
+/* NEW CREAM + CHAMPAGNE HOMEPAGE HEADER */
+body:has(.hero-premium) > .site-header{
+  background:#f5efe5 !important;
+  border-bottom:1px solid #dfd2be !important;
+  box-shadow:0 3px 18px rgba(47,37,27,.07) !important;
+  backdrop-filter:none !important;
+}
+body:has(.hero-premium) > .site-header .new-cream-brand{
+  position:absolute;left:36px;top:50%;transform:translateY(-50%);
+  width:190px;height:76px;display:flex;align-items:center;justify-content:center;
+  z-index:3;overflow:hidden;
+}
+body:has(.hero-premium) > .site-header .new-cream-brand img{
+  display:block;width:100%;height:100%;object-fit:cover;object-position:center;
+  mix-blend-mode:multiply;
+}
+body:has(.hero-premium) > .site-header .nav a{
+  color:#302821 !important;
+}
+body:has(.hero-premium) > .site-header .nav a.active,
+body:has(.hero-premium) > .site-header .nav a:hover{
+  color:#a5783d !important;border-bottom-color:#b58a50 !important;
+}
+body:has(.hero-premium) > .site-header .header-quote{
+  background:#b58a50 !important;color:#fffaf1 !important;
+  border:1px solid #b58a50 !important;border-radius:2px !important;
+  box-shadow:none !important;
+}
+@media(min-width:951px){
+ body:has(.hero-premium) > .site-header{
+   height:104px !important;
+   padding:0 30px !important;
+ }
+ body:has(.hero-premium) > .site-header .nav-left,
+ body:has(.hero-premium) > .site-header .nav-right,
+ body:has(.hero-premium) > .site-header .nav a,
+ body:has(.hero-premium) > .site-header .header-actions{
+   height:104px !important;
+ }
+ body:has(.hero-premium) > .site-header .new-cream-brand{
+   width:190px;height:88px;left:30px;
+ }
+}
+@media(min-width:951px) and (max-width:1300px){
+ body:has(.hero-premium) > .site-header .new-cream-brand{
+   left:12px;width:142px;height:78px;
+ }
+ body:has(.hero-premium) > .site-header .nav-left,
+ body:has(.hero-premium) > .site-header .nav-right{gap:15px !important}
+ body:has(.hero-premium) > .site-header .nav-left{margin-right:15px !important}
+}
+@media(max-width:950px){
+ body:has(.hero-premium) > .site-header .new-cream-brand{
+   width:115px;height:62px;left:12px;
+ }
+ body:has(.hero-premium) > .site-header .menu-toggle{color:#302821 !important}
+}
+@media(max-width:600px){
+ body:has(.hero-premium) > .site-header .new-cream-brand{
+   position:relative;left:auto;top:auto;transform:none;
+   width:120px;height:65px;margin-right:12px;
+   flex:0 0 120px;
+ }
+ body:has(.hero-premium) > .site-header .nav a{
+   color:#302821 !important;
+ }
+}
