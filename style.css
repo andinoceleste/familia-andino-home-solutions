@@ -2976,3 +2976,18 @@ body:has(.hero-centered-cream)>.site-header{
  .footer-refined-contact{align-items:center;text-align:center}
  .footer-refined-bottom{padding:23px 24px;flex-direction:column;text-align:center;gap:10px;font-size:9px}
 }
+
+/* Tighten mobile hero: remove excess whitespace around logo and copy */
+@media(max-width:950px){
+ .hero-centered-cream .hero-editorial-content{
+  padding-top:0 !important;
+ }
+ .hero-centered-cream .hero-featured-logo{
+  margin-top:-28px !important;
+  margin-bottom:-38px !important;
+ }
+ .hero-centered-cream .hero-editorial-eyebrow{
+  position:relative;
+  margin-top:0 !important;
+ }
+}
