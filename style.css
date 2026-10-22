@@ -2899,3 +2899,33 @@ body:has(.hero-centered-cream)>.site-header{
   max-width:84vw !important;
  }
 }
+
+
+/* Desktop header: clean centered hamburger instead of small logo and nav links */
+@media(min-width:951px){
+ body:has(.hero-centered-cream)>.site-header.site-header{
+  display:flex !important;align-items:center !important;justify-content:flex-end !important;
+  height:92px !important;min-height:92px !important;padding:14px 5% !important;
+  background:#f5efe5 !important
+ }
+ body:has(.hero-centered-cream)>.site-header .new-cream-brand,
+ body:has(.hero-centered-cream)>.site-header .nav,
+ body:has(.hero-centered-cream)>.site-header .header-actions{display:none !important}
+ body:has(.hero-centered-cream)>.site-header .menu-toggle{
+  display:flex !important;align-items:center !important;justify-content:center !important;
+  width:62px !important;height:62px !important;position:relative !important;
+  z-index:9999 !important;margin:0 !important;
+  border:1px solid #c7a371 !important;border-radius:8px !important;
+  background:transparent !important;color:#45301e !important;
+  font-size:27px !important;cursor:pointer !important
+ }
+}
+@media(min-width:951px){
+ .mobile-drawer-backdrop{display:block;position:fixed;inset:0;background:rgba(14,12,10,.57);z-index:9997;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+ .mobile-drawer-backdrop.is-open{opacity:1;visibility:visible}
+ .mobile-slide-drawer{display:flex;position:fixed;right:0;top:0;bottom:0;width:min(390px,85vw);height:100dvh;padding:105px 34px 35px;background:#f5efe5;box-shadow:-15px 0 40px #0003;z-index:9998;flex-direction:column;overflow-y:auto;transform:translateX(105%);visibility:hidden;transition:transform .3s ease,visibility .3s}
+ .mobile-slide-drawer.is-open{transform:translateX(0);visibility:visible}
+ .mobile-slide-drawer a{display:block;padding:18px 8px;border-bottom:1px solid #dacbb7;color:#30251d;font:600 14px 'DM Sans',sans-serif;text-decoration:none;letter-spacing:1px;text-transform:uppercase}
+ .mobile-slide-drawer a.drawer-estimate{margin-top:28px;padding:19px 16px;text-align:center;background:#b58a50;color:white;border:0;font-size:12px}
+ body.drawer-open{overflow:hidden !important}
+}
