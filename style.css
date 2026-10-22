@@ -2536,3 +2536,11 @@ body:has(.hero-premium) > .site-header .header-quote{
   width:225px !important;height:120px !important;
  }
 }
+
+/* Seamless cream header logo: retain original crisp lettering, remove visible light box via multiply blending */
+.site-header .new-cream-brand{background:transparent !important;isolation:auto !important}
+.site-header .new-cream-brand img{
+  mix-blend-mode:multiply !important;
+  filter:contrast(1.22) saturate(1.12) !important;
+  opacity:1 !important;
+}
