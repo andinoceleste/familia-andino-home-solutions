@@ -2664,3 +2664,70 @@ body:has(.hero-premium) > .site-header .header-quote{
  .mobile-slide-drawer a.drawer-estimate{margin-top:28px;padding:19px 16px;text-align:center;background:#b58a50;color:white;border:0;font-size:12px}
  .site-header .menu-toggle,body:has(.hero-premium)>.site-header .menu-toggle{position:relative !important;z-index:9999 !important}
 }
+
+
+/* 2026-10-22 mobile polish: seamless logo and compact hero composition */
+@media(max-width:950px){
+ html,body{width:100% !important;overflow-x:hidden !important}
+ body:has(.hero-premium)>.site-header.site-header{
+  height:104px !important;min-height:104px !important;padding:8px 18px !important;
+  background:#f5efe5 !important;overflow:visible !important
+ }
+ body:has(.hero-premium)>.site-header .new-cream-brand{
+  width:205px !important;max-width:calc(100vw - 100px) !important;
+  height:90px !important;flex:0 1 205px !important;overflow:visible !important;
+  background:transparent !important
+ }
+ body:has(.hero-premium)>.site-header .new-cream-brand img{
+  width:100% !important;height:90px !important;object-fit:contain !important;
+  mix-blend-mode:multiply !important;filter:contrast(1.08) !important;
+  background:transparent !important
+ }
+ body:has(.hero-premium)>.site-header .menu-toggle{flex-shrink:0 !important}
+ .hero-premium.hero-editorial{
+  display:block !important;width:100% !important;min-height:0 !important;
+  height:auto !important;overflow:hidden !important;background:#211b17 !important
+ }
+ .hero-editorial .hero-image{
+  position:absolute !important;inset:0 !important;width:100% !important;
+  height:100% !important;order:unset !important;z-index:-1 !important;
+  background-position:60% center !important;
+  background-image:linear-gradient(180deg,rgba(15,12,10,.38),rgba(15,12,10,.67) 42%,rgba(15,12,10,.88)),url('assets/Golden%20Hour%20Mountain%20Modern%20Retreat.png') !important
+ }
+ .hero-editorial .hero-editorial-content{
+  position:relative !important;display:flex !important;flex-direction:column !important;
+  align-items:flex-start !important;justify-content:flex-start !important;
+  box-sizing:border-box !important;width:100% !important;max-width:100% !important;
+  height:auto !important;margin:0 !important;padding:125px 24px 40px !important;
+  overflow-wrap:normal !important
+ }
+ .hero-editorial .hero-editorial-eyebrow{
+  width:100% !important;max-width:100% !important;
+  font-size:10px !important;letter-spacing:2px !important;line-height:1.8 !important;
+  white-space:normal !important;overflow-wrap:break-word !important
+ }
+ .hero-premium.hero-editorial h1{
+  width:100% !important;max-width:100% !important;
+  font-size:clamp(43px,10.2vw,66px) !important;line-height:1.08 !important;
+  letter-spacing:-1.4px !important;white-space:normal !important;
+  overflow-wrap:normal !important;word-break:normal !important
+ }
+ .hero-editorial .hero-editorial-description{
+  width:100% !important;max-width:480px !important;
+  font-size:14px !important;line-height:1.7 !important
+ }
+ .hero-editorial .hero-editorial-cta{
+  width:min(100%,350px) !important;max-width:100% !important;
+  padding:18px 20px !important;font-size:10px !important;letter-spacing:1.2px !important
+ }
+ .hero-editorial .hero-editorial-features{
+  width:100% !important;max-width:100% !important;margin-top:65px !important;
+  gap:0 !important;flex-wrap:nowrap !important
+ }
+ .hero-editorial .hero-editorial-features>div{flex:1 1 0 !important;min-width:0 !important}
+}
+@media(max-width:380px){
+ .hero-premium.hero-editorial h1{font-size:40px !important}
+ .hero-editorial .hero-editorial-content{padding-left:18px !important;padding-right:18px !important}
+ .hero-editorial .hero-editorial-eyebrow{letter-spacing:1.3px !important}
+}
