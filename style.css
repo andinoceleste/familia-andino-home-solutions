@@ -2508,3 +2508,31 @@ body:has(.hero-premium) > .site-header .header-quote{
  body:has(.hero-premium) > header.site-header .nav a{font-size:9px !important;letter-spacing:.6px !important}
  body:has(.hero-premium) > header.site-header .header-quote{font-size:9px !important;padding:13px 11px !important}
 }
+
+/* Larger centered mountain logo — desktop only */
+@media(min-width:1101px){
+ body:has(.hero-premium) > header.site-header{
+  height:145px !important;min-height:145px !important;
+  grid-template-rows:145px !important;
+  grid-template-columns:minmax(0,1fr) 310px minmax(0,1fr) !important;
+ }
+ body:has(.hero-premium) > header.site-header .new-cream-brand{
+  width:310px !important;height:135px !important;
+  padding:0 12px !important;
+ }
+ body:has(.hero-premium) > header.site-header .new-cream-brand img{
+  width:285px !important;height:130px !important;
+  max-width:none !important;object-fit:contain !important;
+ }
+}
+@media(min-width:1101px) and (max-width:1370px){
+ body:has(.hero-premium) > header.site-header{
+  grid-template-columns:minmax(0,1fr) 245px minmax(0,1fr) !important;
+ }
+ body:has(.hero-premium) > header.site-header .new-cream-brand{
+  width:245px !important;height:128px !important;padding:0 8px !important;
+ }
+ body:has(.hero-premium) > header.site-header .new-cream-brand img{
+  width:225px !important;height:120px !important;
+ }
+}
