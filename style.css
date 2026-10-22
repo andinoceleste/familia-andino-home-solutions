@@ -2882,3 +2882,20 @@ body:has(.hero-centered-cream)>.site-header{
   background:transparent !important;
  }
 }
+
+
+/* Refine transparent logo scale on phones */
+@media(max-width:950px){
+ .hero-centered-cream .hero-featured-logo{
+  width:min(440px,82vw) !important;
+  max-width:82vw !important;
+  height:auto !important;
+  margin:4px auto 17px !important;
+ }
+}
+@media(max-width:390px){
+ .hero-centered-cream .hero-featured-logo{
+  width:84vw !important;
+  max-width:84vw !important;
+ }
+}
