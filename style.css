@@ -2622,3 +2622,31 @@ body:has(.hero-premium) > .site-header .header-quote{
  .gallery-page{padding:36px 16px 60px !important}
  .gallery-intro h1{font-size:clamp(38px,11vw,54px) !important}
 }
+
+
+/* Approved luxury photo-overlay homepage refresh */
+.hero-premium.hero-editorial{position:relative !important;display:flex !important;align-items:center !important;min-height:760px !important;height:auto !important;isolation:isolate;background:#201914 !important;color:#fff !important}
+.hero-editorial .hero-image{position:absolute !important;inset:0 !important;width:100% !important;height:100% !important;background-image:linear-gradient(90deg,rgba(15,12,10,.78),rgba(15,12,10,.18)),url('assets/Golden%20Hour%20Mountain%20Modern%20Retreat.png') !important;background-size:cover !important;background-position:center !important;z-index:-2 !important}
+.hero-editorial .hero-cream-panel{display:none !important}
+.hero-editorial .hero-editorial-content{position:relative !important;z-index:1 !important;width:min(720px,90%) !important;max-width:720px !important;padding:95px 0 75px !important;margin-left:7% !important;background:none !important;transform:none !important}
+.hero-editorial .hero-editorial-eyebrow{color:#fff !important;letter-spacing:3px !important}
+.hero-editorial h1{color:#fff !important;font-size:clamp(62px,6.4vw,105px) !important;line-height:1.04 !important;letter-spacing:-2px !important}
+.hero-editorial h1 em{color:#d5aa70 !important}
+.hero-editorial .hero-editorial-description{color:#fff !important;max-width:540px !important;font-size:17px !important;line-height:1.65 !important}
+.hero-editorial .hero-editorial-cta{background:#b88c52 !important;color:#fff !important;border:0 !important}
+.hero-editorial .hero-editorial-features{margin-top:75px !important;display:flex !important;gap:0 !important}
+.hero-editorial .hero-editorial-features>div{border-color:rgba(255,255,255,.55) !important}
+.hero-editorial .hero-editorial-features strong,.hero-editorial .hero-editorial-features small{color:#fff !important}
+.hero-editorial .hero-editorial-features span{color:#d5aa70 !important}
+@media(max-width:950px){
+.hero-premium.hero-editorial{min-height:0 !important;display:block !important}
+.hero-editorial .hero-image{position:absolute !important;inset:0 !important;height:100% !important;background-position:57% center !important;background-image:linear-gradient(180deg,rgba(13,12,11,.18) 0%,rgba(13,12,11,.66) 35%,rgba(13,12,11,.83) 100%),url('assets/Golden%20Hour%20Mountain%20Modern%20Retreat.png') !important}
+.hero-editorial .hero-editorial-content{width:auto !important;max-width:none !important;margin:0 !important;padding:230px 8% 48px !important;background:transparent !important}
+.hero-editorial h1{font-size:clamp(54px,11vw,80px) !important;line-height:1.04 !important;color:#fff !important}
+.hero-editorial .hero-editorial-description{font-size:15px !important;color:#fff !important}
+.hero-editorial .hero-editorial-cta{display:flex !important;justify-content:space-between !important;max-width:360px !important}
+.hero-editorial .hero-editorial-features{margin-top:95px !important;justify-content:space-between !important;gap:4px !important;flex-wrap:nowrap !important}
+.hero-editorial .hero-editorial-features>div{flex:1 !important;min-width:0 !important;display:flex !important;flex-direction:column !important;align-items:center !important;text-align:center !important;padding:0 4px !important;gap:9px !important}
+.hero-editorial .hero-editorial-features strong{font-size:10px !important}
+.hero-editorial .hero-editorial-features small{font-size:8px !important;white-space:normal !important}
+}
