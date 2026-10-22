@@ -2867,3 +2867,18 @@ body:has(.hero-centered-cream)>.site-header{
   background-image:url('assets/Golden%20Hour%20Mountain%20Modern%20Retreat.png') !important
  }
 }
+
+
+/* True transparent PNG: no masking, blending, or faux background treatment */
+.hero-centered-cream .hero-featured-logo{
+ mix-blend-mode:normal !important;filter:none !important;
+ -webkit-mask-image:none !important;mask-image:none !important;
+ background:transparent !important;
+}
+@media(max-width:950px){
+ .hero-centered-cream .hero-featured-logo{
+  mix-blend-mode:normal !important;filter:none !important;
+  -webkit-mask-image:none !important;mask-image:none !important;
+  background:transparent !important;
+ }
+}
