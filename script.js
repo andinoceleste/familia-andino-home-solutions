@@ -4,7 +4,7 @@ document.querySelectorAll('.site-header').forEach((header,index)=>{
  if(!toggle)return;
  const drawer=document.createElement('nav');
  drawer.className='mobile-slide-drawer';
- drawer.id='mobile-slide-drawer-'+index;
+ drawer.id='site-navigation-drawer';
  drawer.setAttribute('aria-label','Mobile navigation');
  drawer.innerHTML='<a href="index.html">Home</a><a href="index.html#services">Services</a><a href="gallery.html">Our Work</a><a href="about.html">About Us</a><a href="index.html#contact">Contact</a><a class="drawer-estimate" href="index.html#contact">Get a Free Estimate →</a>';
  document.body.appendChild(drawer);
@@ -30,5 +30,5 @@ document.querySelectorAll('.site-header').forEach((header,index)=>{
  backdrop.addEventListener('click',close);
  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
- window.addEventListener('resize',()=>{if(window.innerWidth>950)close()});
+ window.addEventListener('resize',()=>{if(false)close()});
 });
