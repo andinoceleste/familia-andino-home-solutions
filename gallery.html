@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=gallery-clean-20261022">
   <style>
     .gallery-page{background:var(--cream);color:#111;min-height:calc(100vh - 106px);padding:65px 0 90px}
     .gallery-intro{text-align:center;max-width:760px;margin:0 auto 36px}
@@ -279,6 +279,12 @@
   .gallery-page{padding-top:12px !important}
   .gallery-intro{margin-bottom:28px !important}
 }
+</style>
+<style>
+/* Ensure all gallery image overlays stay hidden, including cached captions */
+.gallery-page-item .gallery-page-caption,
+.gallery-page-item::before,
+.gallery-page-item::after{display:none !important;content:none !important}
 </style>
 </head>
 <body>
