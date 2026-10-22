@@ -2929,3 +2929,17 @@ body:has(.hero-centered-cream)>.site-header{
  .mobile-slide-drawer a.drawer-estimate{margin-top:28px;padding:19px 16px;text-align:center;background:#b58a50;color:white;border:0;font-size:12px}
  body.drawer-open{overflow:hidden !important}
 }
+
+
+/* Desktop hero: lift logo and scale down without affecting phone layout */
+@media(min-width:951px){
+ .hero-centered-cream .hero-editorial-content{
+  padding-top:0 !important;
+ }
+ .hero-centered-cream .hero-featured-logo{
+  width:min(510px,70vw) !important;
+  max-width:510px !important;
+  margin:0 auto 20px !important;
+  height:auto !important;
+ }
+}
