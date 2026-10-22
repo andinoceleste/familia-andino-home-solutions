@@ -165,6 +165,71 @@
  }
 }
 </style>
+
+<style>
+/* About Us — refined compact cream footer */
+.about-page .about-simple-footer{
+ position:relative;overflow:hidden;background:#f5efe5;color:#302923;
+ border-top:1px solid #dfc8a6;font-family:"DM Sans",sans-serif;
+}
+.about-page .about-simple-footer::before{
+ content:"";position:absolute;right:0;bottom:48px;width:43%;height:90%;
+ background:url("assets/andino-footer-mountains-realistic.webp") right center / cover no-repeat;
+ opacity:.13;pointer-events:none;
+ -webkit-mask-image:linear-gradient(90deg,transparent,#000 65%);
+ mask-image:linear-gradient(90deg,transparent,#000 65%);
+}
+.about-page .about-footer-main{
+ position:relative;z-index:1;max-width:1420px;margin:auto;
+ padding:75px 45px 65px;display:grid;grid-template-columns:1.5fr .55fr .9fr;
+ gap:clamp(35px,5vw,90px);align-items:start;
+}
+.about-page .about-footer-kicker{
+ color:#ad7d3e;font-size:11px;font-weight:700;letter-spacing:2.4px;margin:0 0 16px;
+}
+.about-page .about-footer-intro h2{
+ color:#27211d;font-family:"Playfair Display",Georgia,serif;
+ font-size:clamp(34px,3.4vw,57px);line-height:1.15;letter-spacing:-1px;margin:0 0 16px;
+}
+.about-page .about-footer-intro h2 em{color:#b98b4b}
+.about-page .about-footer-intro>p:not(.about-footer-kicker){
+ font-size:15px;line-height:1.8;max-width:420px;margin:0 0 25px;color:#51483f;
+}
+.about-page .about-footer-button{
+ display:inline-flex;gap:28px;align-items:center;justify-content:space-between;
+ padding:16px 22px;border-radius:3px;background:#b88d51;color:white !important;
+ font-size:11px;font-weight:700;letter-spacing:1px;text-decoration:none;
+}
+.about-page .about-footer-button span{font-size:20px}
+.about-page .about-footer-nav,.about-page .about-footer-contact{
+ display:flex;flex-direction:column;align-items:flex-start;gap:13px;min-width:0;
+}
+.about-page .about-simple-footer h3{
+ color:#a7793b;font-size:12px;letter-spacing:2px;font-weight:700;margin:5px 0 10px;
+}
+.about-page .about-footer-nav a,.about-page .about-footer-contact a,.about-page .about-footer-contact p{
+ color:#40362d;font-size:14px;line-height:1.5;text-decoration:none;margin:0;overflow-wrap:anywhere;
+}
+.about-page .about-footer-nav a:hover,.about-page .about-footer-contact a:hover{color:#a7793b}
+.about-page .about-footer-bottom{
+ position:relative;z-index:1;border-top:1px solid #d7bb94;
+ max-width:1420px;margin:auto;padding:24px 45px;
+ display:flex;justify-content:space-between;gap:18px;
+ color:#6b5947;font-size:10px;letter-spacing:1px;
+}
+@media(max-width:900px){
+ .about-page .about-footer-main{grid-template-columns:1fr 1fr;gap:40px;padding:55px 30px}
+ .about-page .about-footer-intro{grid-column:1/-1}
+ .about-page .about-simple-footer::before{width:70%;opacity:.08}
+ .about-page .about-footer-bottom{padding:23px 30px}
+}
+@media(max-width:560px){
+ .about-page .about-footer-main{grid-template-columns:1fr;gap:30px;padding:45px 23px}
+ .about-page .about-footer-intro{grid-column:auto}
+ .about-page .about-footer-nav,.about-page .about-footer-contact{border-top:1px solid #ddc9ab;padding-top:20px}
+ .about-page .about-footer-bottom{padding:22px 23px;flex-direction:column}
+}
+</style>
 </head>
 
 <body class="about-page">
@@ -367,81 +432,30 @@
 
 <!-- FOOTER -->
 
-<footer class="footer-premium">
-
-  <div class="footer-premium-inner">
-
-    <div class="footer-brand">
-
-      <img src="assets/logo.png" alt="Familia Andino Home Solutions">
-
-      <p class="footer-tagline">
-        MORE THAN PROJECTS.<br>
-        STRONGER HOMES.
-      </p>
-
-      <p class="footer-description">
-        Quality craftsmanship for homes in Raleigh, NC and surrounding areas.
-      </p>
-
+<footer class="about-simple-footer">
+  <div class="about-footer-main">
+    <div class="about-footer-intro">
+      <p class="about-footer-kicker">FAMILIA ANDINO HOME SOLUTIONS LLC</p>
+      <h2>Let's Build <em>Something Great.</em></h2>
+      <p>Quality craftsmanship, thoughtful remodeling, and spaces your family will love.</p>
+      <a class="about-footer-button" href="index.html#contact">GET A FREE ESTIMATE <span aria-hidden="true">→</span></a>
     </div>
-
-
-    <div class="footer-links">
-
-      <p class="footer-heading">QUICK LINKS</p>
-
+    <nav class="about-footer-nav" aria-label="Footer navigation">
+      <h3>EXPLORE</h3>
       <a href="index.html">Home</a>
       <a href="index.html#services">Services</a>
-      <a href="about.html">About Us</a>
       <a href="gallery.html">Our Work</a>
+      <a href="about.html">About Us</a>
       <a href="index.html#contact">Contact</a>
-
-    </div>
-
-
-    <div class="footer-contact">
-
-      <p class="footer-heading">CONTACT US</p>
-
+    </nav>
+    <div class="about-footer-contact">
+      <h3>GET IN TOUCH</h3>
       <a href="tel:+19198575032">(919) 857-5032</a>
-
-      <a href="mailto:gerald.andinohomesolutions@gmail.com">
-        gerald.andinohomesolutions@gmail.com
-      </a>
-
-      <span>Raleigh, NC</span>
-
+      <a href="mailto:gerald.andinohomesolutions@gmail.com">gerald.andinohomesolutions@gmail.com</a>
+      <p>Raleigh, NC</p>
     </div>
-
-
-    <div class="footer-cta">
-
-      <p>LET'S BRING YOUR VISION TO LIFE</p>
-
-      <h2>Get a Free Estimate</h2>
-
-      <a href="index.html#contact" class="gold-btn">
-        GET STARTED →
-      </a>
-
-    </div>
-
   </div>
-
-
-  <div class="footer-bottom">
-
-    <span>© 2026 Familia Andino Home Solutions LLC. All rights reserved.</span>
-
-    <span>Raleigh, NC</span>
-
-    <span>BUILDING SPACES. A BETTER TOMORROW.</span>
-
-    <span>RESIDENTIAL &nbsp;|&nbsp; REMODELING &nbsp;|&nbsp; CONSTRUCTION</span>
-
-  </div>
-
+  <div class="about-footer-bottom"><span>© 2026 Familia Andino Home Solutions LLC. All rights reserved.</span><span>BUILD • REMODEL • IMPROVE</span></div>
 </footer>
 
 </body>
