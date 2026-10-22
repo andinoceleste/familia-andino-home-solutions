@@ -2382,3 +2382,66 @@ body:has(.hero-premium) > .site-header .header-quote{
  .site-header .nav a{font-size:10px !important;letter-spacing:.8px !important}
  .site-header .header-quote{padding:14px 12px !important;font-size:10px !important}
 }
+
+/* HEADER OPTION 4 ALIGNMENT CORRECTION — DESKTOP */
+@media(min-width:901px){
+ .site-header{
+  display:grid !important;
+  grid-template-columns:minmax(0,1fr) 240px minmax(0,1fr) !important;
+  grid-template-rows:105px !important;
+  gap:0 !important;
+  min-height:105px !important;height:105px !important;
+  padding:0 clamp(24px,3.2vw,58px) !important;
+  align-items:center !important;
+ }
+ .site-header .nav-left{
+  grid-column:1 !important;grid-row:1 !important;
+  display:flex !important;position:static !important;
+  justify-content:flex-end !important;
+  align-items:center !important;gap:clamp(12px,1.6vw,27px) !important;
+  margin:0 !important;padding:0 24px 0 0 !important;
+  width:100% !important;min-width:0 !important;
+  transform:none !important;
+ }
+ .site-header .new-cream-brand{
+  grid-column:2 !important;grid-row:1 !important;
+  position:static !important;display:flex !important;
+  justify-content:center !important;align-items:center !important;
+  width:240px !important;height:90px !important;
+  padding:0 15px !important;margin:0 !important;
+  border-left:1px solid #d8c5a9 !important;
+  border-right:1px solid #d8c5a9 !important;
+  transform:none !important;
+ }
+ .site-header .new-cream-brand img{
+  width:195px !important;height:85px !important;max-width:100% !important;
+  object-fit:contain !important;
+ }
+ .site-header .nav-right{
+  grid-column:3 !important;grid-row:1 !important;
+  display:flex !important;position:static !important;
+  justify-content:flex-start !important;align-items:center !important;
+  gap:clamp(12px,1.6vw,27px) !important;
+  margin:0 !important;padding:0 220px 0 24px !important;
+  width:100% !important;min-width:0 !important;
+  transform:none !important;
+ }
+ .site-header .header-actions{
+  grid-column:3 !important;grid-row:1 !important;
+  position:static !important;justify-self:end !important;
+  display:flex !important;align-items:center !important;
+  margin:0 !important;padding:0 !important;
+  z-index:2 !important;
+ }
+ .site-header .nav a{font-size:11px !important;letter-spacing:1.1px !important;white-space:nowrap !important}
+ .site-header .header-quote{padding:14px 17px !important;font-size:10px !important;white-space:nowrap !important}
+}
+@media(min-width:901px) and (max-width:1250px){
+ .site-header{grid-template-columns:minmax(0,1fr) 190px minmax(0,1fr) !important;padding:0 18px !important}
+ .site-header .new-cream-brand{width:190px !important;padding:0 10px !important}
+ .site-header .new-cream-brand img{width:165px !important}
+ .site-header .nav-left{padding-right:13px !important;gap:12px !important}
+ .site-header .nav-right{padding-left:13px !important;padding-right:170px !important;gap:12px !important}
+ .site-header .nav a{font-size:9px !important;letter-spacing:.5px !important}
+ .site-header .header-quote{font-size:9px !important;padding:13px 10px !important}
+}
