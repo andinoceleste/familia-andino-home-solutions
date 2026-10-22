@@ -267,6 +267,26 @@
  .about-page .promise-section .promise-copy h2{font-size:clamp(43px,11vw,65px) !important}
 }
 </style>
+<style>
+/* Mobile About hero: show the complete designed artwork once, without cropping or repeated copy */
+@media(max-width:750px){
+ .about-page .about-hero.about-hero-collage{
+  display:block !important;min-height:0 !important;height:auto !important;
+  padding:0 !important;margin:0 !important;background:#211d1a !important;
+  overflow:hidden !important;
+ }
+ .about-page .about-hero.about-hero-collage::before{
+  content:"" !important;display:block !important;width:100% !important;
+  height:auto !important;aspect-ratio: 1659 / 896 !important;
+  background-image:url("assets/Andino-About-Us-Nueva-Foto.png") !important;
+  background-size:100% 100% !important;background-position:center !important;
+  background-repeat:no-repeat !important;
+ }
+ .about-page .about-hero-collage .about-hero-inner,
+ .about-page .about-hero-collage .about-hero-panels,
+ .about-page .about-hero-collage .about-hero-shade{display:none !important}
+}
+</style>
 </head>
 
 <body class="about-page">
