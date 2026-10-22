@@ -108,6 +108,94 @@
  }
 }
 </style>
+
+<style>
+/* Gallery footer — warm cream, champagne gold, espresso */
+.gallery-footer.gallery-footer-cream{
+ background:#f5efe5 !important;color:#302923 !important;
+ padding:0 !important;position:relative;overflow:hidden;
+ border-top:1px solid #e2d4be !important;
+}
+.gallery-footer-cream .gallery-footer-inner{
+ width:min(1500px,calc(100% - 110px)) !important;
+ max-width:1500px !important;margin:0 auto !important;
+ display:grid !important;grid-template-columns:1.05fr 1.15fr .65fr !important;
+ gap:0 !important;align-items:start !important;padding:75px 0 66px !important;
+ position:relative;z-index:1;
+}
+.gallery-footer-cream .gallery-footer-cta,
+.gallery-footer-cream .gallery-footer-contact,
+.gallery-footer-cream .gallery-footer-links{
+ display:flex !important;flex-direction:column !important;
+ align-items:flex-start !important;justify-content:flex-start !important;
+ min-width:0 !important;min-height:0 !important;
+ padding:0 40px !important;margin:0 !important;
+ border:0 !important;background:none !important;
+}
+.gallery-footer-cream .gallery-footer-cta{padding-left:0 !important}
+.gallery-footer-cream .gallery-footer-contact,
+.gallery-footer-cream .gallery-footer-links{border-left:1px solid #d9c6a8 !important}
+.gallery-footer-cream .footer-eyebrow{font:600 12px/1.5 var(--sans) !important;letter-spacing:4px !important;margin:0 0 6px !important;color:#40362c !important}
+.gallery-footer-cream .gallery-footer-cta h2{
+ font:italic 600 clamp(58px,5.5vw,88px)/1.1 var(--serif) !important;
+ color:#b88943 !important;margin:0 !important;letter-spacing:-2px !important;
+}
+.gallery-footer-cream .footer-gold-rule{width:65px;height:1px;background:#c7a36b;margin:12px 0 19px}
+.gallery-footer-cream .gallery-footer-cta>p:not(.footer-eyebrow){font:400 17px/1.5 var(--sans) !important;color:#4c4640 !important;margin:0 0 21px !important}
+.gallery-footer-cream .footer-estimate{
+ display:inline-flex !important;align-items:center;justify-content:space-between;gap:25px;
+ background:#b88d51 !important;color:#fff !important;
+ padding:17px 23px !important;min-width:280px !important;
+ border-radius:5px !important;font:700 12px/1.4 var(--sans) !important;
+ letter-spacing:1px !important;box-shadow:0 8px 18px #b88d512b !important;
+ text-decoration:none !important;
+}
+.gallery-footer-cream .footer-estimate span{font-size:22px}
+.gallery-footer-cream h3{font:700 13px/1.5 var(--sans) !important;letter-spacing:3px !important;color:#a87938 !important;margin:7px 0 22px !important}
+.gallery-footer-cream .gallery-footer-contact a,
+.gallery-footer-cream .gallery-footer-contact p{
+ display:flex !important;align-items:center !important;gap:14px !important;
+ font:400 14px/1.5 var(--sans) !important;color:#3b332d !important;
+ margin:0 0 18px !important;text-decoration:none !important;overflow-wrap:anywhere;
+}
+.gallery-footer-cream .footer-circle{
+ display:inline-flex;align-items:center;justify-content:center;flex:0 0 39px;
+ width:39px;height:39px;border:1px solid #d8bc90;border-radius:50%;
+ color:#ad7b37;font-size:20px;
+}
+.gallery-footer-cream .gallery-footer-links a{
+ display:flex !important;gap:14px !important;align-items:center !important;
+ font:500 14px/1.4 var(--sans) !important;color:#3b332d !important;
+ margin:0 0 13px !important;text-decoration:none !important;
+}
+.gallery-footer-cream .gallery-footer-links a span{color:#b98c4d;font-size:22px;line-height:1}
+.gallery-footer-cream a:hover{color:#a87938 !important}
+.gallery-footer-cream .gallery-footer-bottom{
+ width:100% !important;max-width:none !important;min-height:85px !important;
+ padding:24px max(55px,calc((100vw - 1500px)/2)) !important;
+ margin:0 !important;border-top:1px solid #cba56f !important;
+ display:flex !important;align-items:center !important;justify-content:space-between !important;
+ background:transparent !important;color:#544a3f !important;
+ font:500 10px/1.6 var(--sans) !important;letter-spacing:1.7px !important;
+ text-align:left !important;
+}
+.gallery-footer-cream .footer-backtop{color:#a87938 !important;font-size:27px;text-decoration:none}
+@media(max-width:1000px){
+ .gallery-footer-cream .gallery-footer-inner{width:calc(100% - 50px) !important;grid-template-columns:1fr 1fr !important;gap:36px 0 !important;padding:55px 0 !important}
+ .gallery-footer-cream .gallery-footer-cta{grid-column:1/-1}
+ .gallery-footer-cream .gallery-footer-contact{border-left:0 !important;padding-left:0 !important}
+ .gallery-footer-cream .gallery-footer-links{padding-left:30px !important}
+ .gallery-footer-cream .gallery-footer-bottom{padding:22px 25px !important}
+}
+@media(max-width:600px){
+ .gallery-footer-cream .gallery-footer-inner{grid-template-columns:1fr !important;gap:32px !important;width:calc(100% - 42px) !important;padding:45px 0 !important}
+ .gallery-footer-cream .gallery-footer-cta,.gallery-footer-cream .gallery-footer-contact,.gallery-footer-cream .gallery-footer-links{grid-column:1 !important;border-left:0 !important;padding:0 !important}
+ .gallery-footer-cream .gallery-footer-contact,.gallery-footer-cream .gallery-footer-links{border-top:1px solid #dbc8a9 !important;padding-top:24px !important}
+ .gallery-footer-cream .gallery-footer-cta h2{font-size:66px !important}
+ .gallery-footer-cream .footer-estimate{min-width:0 !important;width:100% !important}
+ .gallery-footer-cream .gallery-footer-bottom{gap:12px !important;font-size:9px !important;letter-spacing:1px !important}
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
@@ -172,38 +260,33 @@
     <button class="lightbox-next" type="button" aria-label="Next photo">&#8594;</button>
   </div>
 </main>
-<footer class="gallery-footer">
+<footer class="gallery-footer gallery-footer-cream" id="gallery-footer">
   <div class="gallery-footer-inner">
-
-    <div class="gallery-footer-brand">
-      
-      <p>BUILDING SPACES. A BETTER TOMORROW.</p>
-    </div>
-
-    <div class="gallery-footer-contact">
-      <a href="tel:+19198575032">(919) 857-5032</a>
-      <a href="mailto:gerald.andinohomesolutions@gmail.com">gerald.andinohomesolutions@gmail.com</a>
-      <span>Raleigh, NC</span>
-    </div>
-
-    <div class="gallery-footer-links">
-      <a href="index.html">HOME</a>
-      <a href="index.html#services">SERVICES</a>
-      <a href="index.html#about">ABOUT US</a>
-      <a href="gallery.html">OUR WORK</a>
-      <a href="index.html#contact">CONTACT</a>
-    </div>
-
     <div class="gallery-footer-cta">
-      <h3>Let's Build Something Together</h3>
+      <p class="footer-eyebrow">LET'S BUILD SOMETHING</p>
+      <h2>Together</h2>
+      <div class="footer-gold-rule"></div>
       <p>Get in touch today for a free estimate.</p>
-      <a href="index.html#contact" class="gold-btn">Get a Free Estimate <span>→</span></a>
+      <a href="index.html#contact" class="footer-estimate">GET A FREE ESTIMATE <span aria-hidden="true">→</span></a>
     </div>
-
+    <div class="gallery-footer-contact">
+      <h3>CONTACT US</h3>
+      <a href="tel:+19198575032"><span class="footer-circle" aria-hidden="true">☎</span>(919) 857-5032</a>
+      <a href="mailto:gerald.andinohomesolutions@gmail.com"><span class="footer-circle" aria-hidden="true">✉</span>gerald.andinohomesolutions@gmail.com</a>
+      <p><span class="footer-circle" aria-hidden="true">⌖</span>Raleigh, NC</p>
+    </div>
+    <nav class="gallery-footer-links" aria-label="Footer navigation">
+      <h3>QUICK LINKS</h3>
+      <a href="index.html">HOME <span aria-hidden="true">›</span></a>
+      <a href="index.html#services">SERVICES <span aria-hidden="true">›</span></a>
+      <a href="gallery.html">OUR WORK <span aria-hidden="true">›</span></a>
+      <a href="about.html">ABOUT US <span aria-hidden="true">›</span></a>
+      <a href="index.html#contact">CONTACT <span aria-hidden="true">›</span></a>
+    </nav>
   </div>
-
   <div class="gallery-footer-bottom">
-    © 2026 Familia Andino Home Solutions LLC. All rights reserved.
+    <span>© 2026 FAMILIA ANDINO HOME SOLUTIONS LLC. ALL RIGHTS RESERVED.</span>
+    <a class="footer-backtop" href="#top" aria-label="Back to top">↑</a>
   </div>
 </footer>
 
