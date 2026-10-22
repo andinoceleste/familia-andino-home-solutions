@@ -65,6 +65,70 @@
  .about-page > .about-clean-header .menu-toggle{display:block !important;position:static !important;color:#302923 !important}
 }
 </style>
+
+<style>
+/* About hero: editorial three-panel concept 5 */
+.about-page .about-hero.about-hero-collage{
+ position:relative !important;min-height:620px !important;
+ display:flex !important;align-items:center !important;justify-content:flex-start !important;
+ padding:90px max(6%,calc((100vw - 1400px)/2)) !important;
+ background:#211d1a !important;overflow:hidden !important;
+}
+.about-page .about-hero-panels{position:absolute;inset:0;display:flex;z-index:0;overflow:hidden}
+.about-page .about-panel{
+ position:absolute;top:-5%;bottom:-5%;background-size:cover;background-position:center;
+ filter:sepia(.45) saturate(.72) brightness(.82);
+ border-left:5px solid #f4eadd;transform:skewX(-15deg);overflow:hidden;
+}
+.about-page .about-panel-craft{
+ left:-10%;width:53%;background-image:url("assets/work-deck-progress.jpg");background-position:center;
+ border-left:0;filter:sepia(.75) saturate(.65) brightness(.52);
+}
+.about-page .about-panel-family{
+ left:43%;width:32%;background-image:url("assets/work-screened-porch.jpg");
+ filter:sepia(.8) saturate(.6) brightness(.75);
+}
+.about-page .about-panel-home{
+ left:74%;width:40%;background-image:url("assets/work-kitchen-remodel.jpg");
+ filter:sepia(.65) saturate(.75) brightness(.85);
+}
+.about-page .about-hero-shade{
+ position:absolute;inset:0;z-index:1;
+ background:linear-gradient(90deg,rgba(14,13,12,.96) 0%,rgba(14,13,12,.91) 27%,rgba(14,13,12,.52) 48%,rgba(14,13,12,.06) 78%);
+}
+.about-page .about-hero-collage .about-hero-inner{
+ position:relative !important;z-index:2 !important;
+ margin:0 !important;padding:0 !important;max-width:700px !important;
+ width:100% !important;text-align:left !important;
+}
+.about-page .about-hero-collage .eyebrow{
+ color:#d4a257 !important;letter-spacing:3px !important;margin:0 0 20px !important;
+}
+.about-page .about-hero-collage h1{
+ color:#fff !important;font:600 clamp(44px,4.6vw,75px)/1.1 "Playfair Display",serif !important;
+ margin:0 0 23px !important;letter-spacing:-1.8px !important;
+}
+.about-page .about-hero-collage h1 em{color:#c8994e !important;font-style:italic !important}
+.about-page .about-hero-collage .about-hero-text{
+ color:#f0eae0 !important;max-width:520px !important;
+ font:400 15px/1.85 "DM Sans",sans-serif !important;
+ margin:0 0 28px !important;text-align:left !important;
+}
+.about-page .about-story-btn{
+ display:inline-flex;align-items:center;gap:30px;
+ background:#b88d51;color:#fff !important;padding:17px 25px;
+ font:700 11px/1.3 "DM Sans",sans-serif;letter-spacing:1px;text-decoration:none;border-radius:3px;
+}
+.about-page .about-story-btn span{font-size:20px}
+@media(max-width:750px){
+ .about-page .about-hero.about-hero-collage{min-height:580px !important;padding:80px 25px !important}
+ .about-page .about-panel-craft{width:100%;left:-20%}
+ .about-page .about-panel-family{left:65%;width:65%}
+ .about-page .about-panel-home{display:none}
+ .about-page .about-hero-shade{background:linear-gradient(90deg,rgba(14,13,12,.94),rgba(14,13,12,.7))}
+ .about-page .about-hero-collage h1{font-size:clamp(37px,8vw,57px) !important}
+}
+</style>
 </head>
 
 <body class="about-page">
@@ -90,31 +154,20 @@
 
   <!-- ABOUT PAGE INTRO -->
 
-  <section class="about-hero">
-
-    <div class="about-hero-inner">
-
-      <p class="eyebrow">ABOUT US</p>
-
-      <h1>
-        Built With Purpose.<br>
-        <em>Rooted in Family.</em>
-      </h1>
-
-    <p class="about-hero-text">
-  At Familia Andino Home Solutions, we believe that building a home is about
-  more than materials, measurements, and finished projects. It’s about creating
-  spaces where families can grow, make memories, and feel proud of where they live.
-  
-  Our company was built from hard work, family values, and a passion for
-  craftsmanship — values that have been carried from one generation to the next.
-  Every project we take on is an opportunity to honor those values while creating
-  something meaningful for another family.
-</p>
-
-    </div>
-
-  </section>
+  <section class="about-hero about-hero-collage">
+  <div class="about-hero-panels" aria-hidden="true">
+    <div class="about-panel about-panel-craft"></div>
+    <div class="about-panel about-panel-family"></div>
+    <div class="about-panel about-panel-home"></div>
+  </div>
+  <div class="about-hero-shade"></div>
+  <div class="about-hero-inner">
+    <p class="eyebrow">ABOUT US</p>
+    <h1>Built With Purpose.<br><em>Rooted in Family.</em></h1>
+    <p class="about-hero-text">At Familia Andino Home Solutions, we believe that building a home is about more than materials, measurements, and finished projects. It's about creating spaces where families can grow, make memories, and feel proud of where they live.</p>
+    <a class="about-story-btn" href="#founder">OUR STORY <span aria-hidden="true">→</span></a>
+  </div>
+</section>
 
 
   <!-- MISSION + VISION -->
@@ -214,7 +267,7 @@
 
   <!-- GERALD'S STORY -->
 
-  <section class="gerald-story">
+  <section id="founder" class="gerald-story">
 
     <div class="gerald-story-grid">
 
