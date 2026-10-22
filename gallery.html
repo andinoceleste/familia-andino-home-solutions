@@ -272,6 +272,14 @@
  }
 }
 </style>
+<style>
+/* Reduce empty space above Project Gallery on mobile */
+@media(max-width:950px){
+  body:has(.gallery-page) > .site-header{height:70px !important;min-height:70px !important}
+  .gallery-page{padding-top:12px !important}
+  .gallery-intro{margin-bottom:28px !important}
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
