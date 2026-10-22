@@ -46,6 +46,39 @@
       body:has(.gallery-page) .site-header .header-actions { margin-left: 24px !important; }
     }
   </style>
+
+<style>
+/* Gallery desktop: all five links in one compact row, estimate button at far right */
+@media (min-width: 951px) {
+  body:has(.gallery-page) > .site-header {
+    display: flex !important;
+    grid-template-columns: none !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    column-gap: 24px !important;
+    padding: 0 3.2% !important;
+  }
+  body:has(.gallery-page) > .site-header .nav-left,
+  body:has(.gallery-page) > .site-header .nav-right {
+    position: static !important;
+    inset: auto !important;
+    transform: none !important;
+    display: flex !important;
+    flex: 0 0 auto !important;
+    width: max-content !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 26px !important;
+    justify-content: flex-start !important;
+  }
+  body:has(.gallery-page) > .site-header .header-actions {
+    position: static !important;
+    transform: none !important;
+    margin: 0 0 0 auto !important;
+    flex: 0 0 auto !important;
+  }
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
