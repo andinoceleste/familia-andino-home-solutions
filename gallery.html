@@ -243,6 +243,35 @@
 @media(max-width:1000px){.gallery-footer-cream .footer-mountain-art{width:330px !important;opacity:.22 !important}}
 @media(max-width:600px){.gallery-footer-cream .footer-mountain-art{width:250px !important;opacity:.15 !important;bottom:75px !important}}
 </style>
+
+<style>
+/* Approved realistic mountain and home artwork — gallery footer */
+.gallery-footer-cream .footer-mountain-art{
+ display:none !important;
+}
+.gallery-footer.gallery-footer-cream{
+ background-color:#f5efe5 !important;
+ background-image:linear-gradient(90deg,#f5efe5 0%,#f5efe5 55%,rgba(245,239,229,.94) 66%,rgba(245,239,229,.45) 82%,rgba(245,239,229,.06) 100%),url("assets/andino-footer-mountains-realistic.webp") !important;
+ background-position:center, right center !important;
+ background-size:cover,auto 100% !important;
+ background-repeat:no-repeat !important;
+}
+.gallery-footer-cream .gallery-footer-links::after{display:none !important}
+.gallery-footer-cream .gallery-footer-bottom{
+ background:rgba(245,239,229,.96) !important;
+}
+@media(max-width:1000px){
+ .gallery-footer.gallery-footer-cream{
+  background-image:linear-gradient(90deg,rgba(245,239,229,.97),rgba(245,239,229,.78)),url("assets/andino-footer-mountains-realistic.webp") !important;
+ }
+}
+@media(max-width:600px){
+ .gallery-footer.gallery-footer-cream{
+  background-size:cover,auto 62% !important;
+  background-position:center,right bottom 70px !important;
+ }
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
