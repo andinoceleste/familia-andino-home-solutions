@@ -79,6 +79,35 @@
   }
 }
 </style>
+
+<style>
+/* Center the five gallery navigation links as one group on desktop */
+@media (min-width: 951px) {
+ body:has(.gallery-page) > .site-header { position: relative !important; }
+ body:has(.gallery-page) > .site-header .nav-left {
+   margin-left: 0 !important;
+ }
+ body:has(.gallery-page) > .site-header .nav-right {
+   margin-left: 0 !important;
+ }
+ body:has(.gallery-page) > .site-header .nav-left,
+ body:has(.gallery-page) > .site-header .nav-right {
+   position: relative !important;
+   left: auto !important;
+   right: auto !important;
+ }
+ body:has(.gallery-page) > .site-header {
+   justify-content: center !important;
+ }
+ body:has(.gallery-page) > .site-header .header-actions {
+   position: absolute !important;
+   right: 3.2% !important;
+   top: 50% !important;
+   transform: translateY(-50%) !important;
+   margin: 0 !important;
+ }
+}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
