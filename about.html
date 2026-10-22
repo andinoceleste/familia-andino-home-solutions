@@ -287,6 +287,37 @@
  .about-page .about-hero-collage .about-hero-shade{display:none !important}
 }
 </style>
+<style>
+/* About Us mobile header: always-visible compact navigation */
+@media(max-width:950px){
+ .about-page > .about-clean-header{
+  height:auto !important;min-height:76px !important;padding:12px 14px !important;
+  display:flex !important;align-items:center !important;justify-content:center !important;
+  flex-wrap:wrap !important;gap:0 !important;
+ }
+ .about-page > .about-clean-header .nav,
+ .about-page > .about-clean-header .nav-left,
+ .about-page > .about-clean-header .nav-right{
+  position:static !important;inset:auto !important;transform:none !important;
+  display:contents !important;width:auto !important;height:auto !important;
+  margin:0 !important;padding:0 !important;background:transparent !important;
+  box-shadow:none !important;
+ }
+ .about-page > .about-clean-header .nav a{
+  display:inline-flex !important;align-items:center !important;justify-content:center !important;
+  flex:0 0 auto !important;width:auto !important;min-height:40px !important;height:auto !important;
+  padding:9px 9px !important;margin:0 !important;border-bottom:0 !important;
+  color:#302923 !important;font-size:10px !important;letter-spacing:.5px !important;
+  white-space:nowrap !important;
+ }
+ .about-page > .about-clean-header .nav a.active{border-bottom:2px solid #b88d51 !important}
+ .about-page > .about-clean-header .menu-toggle,
+ .about-page > .about-clean-header .header-actions{display:none !important}
+}
+@media(max-width:390px){
+ .about-page > .about-clean-header .nav a{font-size:9px !important;padding:8px 7px !important}
+}
+</style>
 </head>
 
 <body class="about-page">
