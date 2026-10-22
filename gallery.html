@@ -36,6 +36,15 @@
     @media(max-width:950px){.gallery-page-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:560px){.gallery-page{padding:54px 0 65px}.gallery-page-grid{grid-template-columns:1fr}.gallery-page-item img{height:270px}.gallery-intro h1{font-size:48px}.gallery-lightbox{padding:60px 45px}.lightbox-prev,.lightbox-next{font-size:25px;padding:10px}.lightbox-prev{left:4px}.lightbox-next{right:4px}.lightbox-close{right:15px;top:14px;font-size:34px}.lightbox-caption{font-size:16px}}
   </style>
+
+  <style>
+    /* Gallery only: bring header navigation links closer together */
+    @media (min-width: 951px) {
+      body:has(.gallery-page) .site-header { justify-content: center !important; gap: 34px !important; }
+      body:has(.gallery-page) .site-header .nav { margin-left: 0 !important; gap: 22px !important; flex: 0 0 auto !important; }
+      body:has(.gallery-page) .site-header .header-actions { margin-left: 30px !important; }
+    }
+  </style>
 </head>
 <body>
 <header class="site-header" id="top">
