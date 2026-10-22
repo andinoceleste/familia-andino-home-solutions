@@ -223,6 +223,26 @@
 @media(max-width:1000px){.gallery-footer-cream .footer-mountain-art{width:330px;opacity:.1}}
 @media(max-width:600px){.gallery-footer-cream .footer-mountain-art{width:260px;bottom:75px;opacity:.08}}
 </style>
+
+<style>
+/* Richer, cleaner mountain watermark — gallery footer only */
+.gallery-footer-cream .footer-mountain-art{
+ right:-10px !important;bottom:84px !important;
+ width:min(31vw,480px) !important;
+ color:#b48b54 !important;opacity:.33 !important;
+ z-index:0 !important;
+}
+.gallery-footer-cream .footer-mountain-art svg{filter:drop-shadow(0 2px 0 rgba(123,87,43,.07))}
+.gallery-footer-cream .gallery-footer-inner{position:relative !important;z-index:1 !important}
+.gallery-footer-cream .gallery-footer-links{position:relative !important;z-index:2 !important}
+.gallery-footer-cream .gallery-footer-links::after{
+ content:"" !important;position:absolute !important;inset:-15px -10px -15px 20px !important;
+ background:linear-gradient(90deg,rgba(245,239,229,.95),rgba(245,239,229,.73) 55%,rgba(245,239,229,.18)) !important;
+ z-index:-1 !important;pointer-events:none !important;
+}
+@media(max-width:1000px){.gallery-footer-cream .footer-mountain-art{width:330px !important;opacity:.22 !important}}
+@media(max-width:600px){.gallery-footer-cream .footer-mountain-art{width:250px !important;opacity:.15 !important;bottom:75px !important}}
+</style>
 </head>
 <body>
 <header class="site-header" id="top">
