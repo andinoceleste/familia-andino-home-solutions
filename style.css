@@ -2212,3 +2212,106 @@ body:has(.hero-premium) > .site-header .header-quote{
  .footer-premium .footer-cta{min-height:280px;padding:30px 25px !important}
  .footer-premium .footer-bottom{width:calc(100% - 36px);gap:12px;justify-content:center;text-align:center}
 }
+
+/* FOOTER REDESIGN V3: three balanced columns + full-width photographic CTA */
+.footer.footer-premium{padding:0 !important;background:#27221d !important;overflow:hidden}
+.footer-premium .footer-premium-inner{
+ box-sizing:border-box;width:min(1320px,calc(100% - 80px)) !important;
+ max-width:1320px !important;margin:0 auto !important;
+ padding:65px 0 48px !important;min-height:0 !important;
+ display:grid !important;
+ grid-template-columns:1.15fr .8fr 1.2fr !important;
+ grid-template-areas:"brand links contact" "cta cta cta" !important;
+ column-gap:75px !important;row-gap:48px !important;
+ align-items:start !important;background:transparent !important;
+}
+.footer-premium .footer-brand{
+ grid-area:brand !important;min-height:0 !important;
+ padding:0 35px 0 0 !important;margin:0 !important;
+ border-right:1px solid rgba(204,169,113,.36) !important;
+ align-items:flex-start !important;text-align:left !important;
+}
+.footer-premium .footer-brand img{
+ display:block !important;width:245px !important;max-width:100% !important;
+ height:auto !important;padding:0 !important;margin:0 0 20px !important;
+ background:transparent !important;border:0 !important;box-shadow:none !important;
+}
+.footer-premium .footer-tagline{
+ text-align:left !important;letter-spacing:2px !important;
+ font-size:12px !important;line-height:1.7 !important;
+ margin:0 0 16px !important;
+}
+.footer-premium .footer-description{
+ text-align:left !important;margin:0 !important;
+ max-width:280px !important;font-size:12px !important;
+ line-height:1.75 !important;
+}
+.footer-premium .footer-description::before{margin:0 0 16px !important}
+.footer-premium .footer-links{
+ grid-area:links !important;align-self:start !important;
+ display:flex !important;flex-direction:column !important;
+ gap:13px !important;padding:20px 0 0 !important;
+}
+.footer-premium .footer-contact{
+ grid-area:contact !important;align-self:start !important;
+ padding:20px 0 0 !important;
+}
+.footer-premium .footer-links h3,.footer-premium .footer-contact h3{
+ font-size:25px !important;margin:0 0 21px !important;
+ font-family:Georgia,serif !important;font-weight:400 !important;
+}
+.footer-premium .footer-links a{font-size:13px !important}
+.footer-premium .footer-contact p{font-size:13px !important;margin:0 0 18px !important}
+.footer-premium .footer-social{margin-top:25px !important}
+.footer-premium .footer-cta{
+ grid-area:cta !important;box-sizing:border-box !important;
+ width:100% !important;min-height:270px !important;
+ padding:40px 7% !important;
+ display:flex !important;flex-direction:column !important;
+ justify-content:center !important;align-items:flex-start !important;
+ background:linear-gradient(90deg,rgba(27,21,17,.92) 0%,rgba(27,21,17,.72) 48%,rgba(27,21,17,.12) 100%),url("assets/hero-home.jpg") center 52%/cover no-repeat !important;
+ border:1px solid rgba(203,159,92,.38) !important;
+}
+.footer-premium .footer-cta h2{
+ font-size:clamp(32px,3.2vw,49px) !important;
+ max-width:620px !important;margin:0 0 22px !important;
+}
+.footer-premium .footer-cta .gold-btn{
+ background:#b58a50 !important;color:#fff !important;
+ padding:17px 27px !important;font-size:12px !important;
+}
+.footer-premium .footer-bottom{
+ box-sizing:border-box;width:min(1320px,calc(100% - 80px)) !important;
+ max-width:1320px !important;margin:0 auto !important;
+ padding:23px 0 26px !important;gap:15px !important;
+ border-top:1px solid rgba(204,169,113,.35) !important;
+ background:transparent !important;
+}
+@media(max-width:900px){
+ .footer-premium .footer-premium-inner{
+  width:calc(100% - 50px) !important;
+  grid-template-columns:1fr 1fr !important;
+  grid-template-areas:"brand links" "contact contact" "cta cta" !important;
+  gap:35px !important;padding:50px 0 35px !important;
+ }
+ .footer-premium .footer-brand{border-right:0 !important}
+ .footer-premium .footer-contact{padding-top:0 !important}
+ .footer-premium .footer-bottom{width:calc(100% - 50px) !important}
+}
+@media(max-width:600px){
+ .footer-premium .footer-premium-inner{
+  width:calc(100% - 38px) !important;
+  grid-template-columns:1fr !important;
+  grid-template-areas:"brand" "links" "contact" "cta" !important;
+  gap:30px !important;padding:42px 0 30px !important;
+ }
+ .footer-premium .footer-brand{align-items:center !important;text-align:center !important;padding:0 !important}
+ .footer-premium .footer-brand img{width:225px !important;margin:0 auto 20px !important}
+ .footer-premium .footer-tagline,.footer-premium .footer-description{text-align:center !important}
+ .footer-premium .footer-description{margin:0 auto !important}
+ .footer-premium .footer-description::before{margin:0 auto 16px !important}
+ .footer-premium .footer-links,.footer-premium .footer-contact{padding:0 !important}
+ .footer-premium .footer-cta{min-height:285px !important;padding:30px 24px !important}
+ .footer-premium .footer-cta h2{font-size:34px !important}
+ .footer-premium .footer-bottom{width:calc(100% - 38px) !important;text-align:center !important;justify-content:center !important}
+}
