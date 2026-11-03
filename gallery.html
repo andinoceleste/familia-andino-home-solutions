@@ -396,15 +396,15 @@
 (function(){
 const grid=document.querySelector('.gallery-page-grid'),all=[...grid.querySelectorAll('.gallery-page-item')];
 const definitions=[
-['Poolside Patio & Hardscaping',[25,26,27]],
-['Custom Deck & Outdoor Living',[28,29,30,31]],
-['Custom Built-In Cabinetry',[10,12,16,32]],
+['Poolside Patio & Hardscaping',[24,25,26]],
+['Custom Deck & Outdoor Living',[27,28,29,30]],
+['Custom Built-In Cabinetry',[31,10,12,16]],
 ['Custom Media Walls',[0,15,17]],
 ['Bathroom Remodeling',[1,9,11]],
 ['Kitchen & Cabinet Work',[2,3]],
 ['Trim & Interior Finishes',[4,13]],
 ['Porches & Decks',[5,6,7,8,14]],
-['Custom Outdoor Projects',[18,19,20,21,22,23,24]]
+['Custom Outdoor Projects',[18,19,20,21,22,23]]
 ];
 const used=new Set(definitions.flatMap(g=>g[1]));
 all.forEach((a,i)=>{if(!used.has(i))definitions.push([a.dataset.caption||'Additional Project',[i]])});
