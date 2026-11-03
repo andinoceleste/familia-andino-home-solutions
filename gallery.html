@@ -286,11 +286,7 @@
 .gallery-page-item::before,
 .gallery-page-item::after{display:none !important;content:none !important}
 </style>
-<style>
-.gallery-page-item .project-overlay{display:flex!important;position:absolute;bottom:0;left:0;right:0;align-items:end;justify-content:space-between;gap:10px;padding:44px 16px 16px;background:linear-gradient(transparent,#18130fdb);color:#fff;pointer-events:none}
-.gallery-page-item .project-name{font:600 19px/1.2 var(--serif)}
-.gallery-page-item .project-count{font:600 10px/1.3 var(--sans);letter-spacing:1px;white-space:nowrap;color:#ead4b2}
-</style></head>
+</head>
 <body>
 <header class="site-header" id="top">
   <nav class="nav nav-left">
@@ -338,14 +334,7 @@
 <button class="gallery-page-item" type="button" data-full="assets/ChatGPT Image Oct 19, 2026, 12_24_56 PM.jpg" data-caption="Custom Shed Construction"><img src="assets/ChatGPT Image Oct 19, 2026, 12_24_56 PM.jpg" alt="Custom shed construction project"></button>
 <button class="gallery-page-item" type="button" data-full="assets/ChatGPT Image Oct 19, 2026, 12_25_01 PM.jpg" data-caption="Shed Deck and Stairs"><img src="assets/ChatGPT Image Oct 19, 2026, 12_25_01 PM.jpg" alt="Shed with custom wooden deck and stairs"></button>
 <button class="gallery-page-item" type="button" data-full="assets/ChatGPT Image Oct 19, 2026, 12_25_05 PM.jpg" data-caption="Custom Shed Deck"><img src="assets/ChatGPT Image Oct 19, 2026, 12_25_05 PM.jpg" alt="Custom deck beside shed"></button>
-<button class="gallery-page-item" type="button" data-full="assets/ChatGPT Image Oct 19, 2026, 12_25_14 PM.jpg" data-caption="Completed Shed Deck"><img src="assets/ChatGPT Image Oct 19, 2026, 12_25_14 PM.jpg" alt="Completed shed deck and stairs"></button><button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_41_35 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_41_35 PM.jpg" alt="Project photo" loading="lazy"></button>
-<button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_41_47 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_41_47 PM.jpg" alt="Project photo" loading="lazy"></button>
-<button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_41_53 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_41_53 PM.jpg" alt="Project photo" loading="lazy"></button>
-<button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_42_01 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_42_01 PM.jpg" alt="Project photo" loading="lazy"></button>
-<button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_42_07 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_42_07 PM.jpg" alt="Project photo" loading="lazy"></button>
-<button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_42_14 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_42_14 PM.jpg" alt="Project photo" loading="lazy"></button>
-<button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_42_19 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_42_19 PM.jpg" alt="Project photo" loading="lazy"></button>
-<button class="gallery-page-item" data-full="assets/ChatGPT Image Nov 3, 2026, 03_43_01 PM.jpg" data-caption="New project"><img src="assets/ChatGPT Image Nov 3, 2026, 03_43_01 PM.jpg" alt="Project photo" loading="lazy"></button>
+<button class="gallery-page-item" type="button" data-full="assets/ChatGPT Image Oct 19, 2026, 12_25_14 PM.jpg" data-caption="Completed Shed Deck"><img src="assets/ChatGPT Image Oct 19, 2026, 12_25_14 PM.jpg" alt="Completed shed deck and stairs"></button>
       </div>
 
 
@@ -394,33 +383,47 @@
 
 <script>
 (function(){
-const grid=document.querySelector('.gallery-page-grid'),all=[...grid.querySelectorAll('.gallery-page-item')];
-const definitions=[
-['Poolside Patio & Hardscaping',[24,25,26]],
-['Custom Deck & Outdoor Living',[27,28,29,30]],
-['Custom Built-In Cabinetry',[31,10,12,16]],
-['Custom Media Walls',[0,15,17]],
-['Bathroom Remodeling',[1,9,11]],
-['Kitchen & Cabinet Work',[2,3]],
-['Trim & Interior Finishes',[4,13]],
-['Porches & Decks',[5,6,7,8,14]],
-['Custom Outdoor Projects',[18,19,20,21,22,23]]
-];
-const used=new Set(definitions.flatMap(g=>g[1]));
-all.forEach((a,i)=>{if(!used.has(i))definitions.push([a.dataset.caption||'Additional Project',[i]])});
-const groups=definitions.map(([name,ids])=>({name,photos:ids.map(i=>all[i]).filter(Boolean)})).filter(g=>g.photos.length);
-grid.replaceChildren();
-const box=document.getElementById('galleryLightbox'),img=document.getElementById('lightboxImage'),cap=document.getElementById('lightboxCaption');
-let group=null,index=0;
-function show(i){if(!group)return;index=(i+group.photos.length)%group.photos.length;let p=group.photos[index];img.src=p.dataset.full;img.alt=p.querySelector('img').alt;cap.textContent=group.name+' · '+(index+1)+' / '+group.photos.length;box.classList.add('open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden'}
-function close(){box.classList.remove('open');box.setAttribute('aria-hidden','true');document.body.style.overflow='';img.removeAttribute('src')}
-groups.forEach(g=>{let b=document.createElement('button');b.className='gallery-page-item';b.type='button';b.setAttribute('aria-label','View '+g.name);let pic=document.createElement('img');pic.src=g.photos[0].querySelector('img').src;pic.alt=g.name;pic.loading='lazy';let label=document.createElement('span');label.className='project-overlay';let title=document.createElement('span');title.className='project-name';title.textContent=g.name;let count=document.createElement('span');count.className='project-count';count.textContent=g.photos.length+' PHOTOS →';label.append(title,count);b.append(pic,label);b.onclick=()=>{group=g;show(0)};grid.append(b)});
-document.querySelector('.lightbox-close').onclick=close;
-document.querySelector('.lightbox-prev').onclick=()=>show(index-1);
-document.querySelector('.lightbox-next').onclick=()=>show(index+1);
-box.onclick=e=>{if(e.target===box)close()};
-document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(index-1);if(e.key==='ArrowRight')show(index+1)});
-let x=null;box.addEventListener('touchstart',e=>{x=e.changedTouches[0].screenX},{passive:true});box.addEventListener('touchend',e=>{if(x===null)return;let d=e.changedTouches[0].screenX-x;if(Math.abs(d)>60)show(index+(d<0?1:-1));x=null},{passive:true});
+  const box=document.getElementById('galleryLightbox'),
+        image=document.getElementById('lightboxImage'),
+        caption=document.getElementById('lightboxCaption');
+
+  const items=[...document.querySelectorAll('.gallery-page-item')];
+  let current=0;
+
+  function show(i){
+    current=(i+items.length)%items.length;
+    const item=items[current];
+    image.src=item.dataset.full;
+    image.alt=item.querySelector('img').alt;
+    caption.textContent=item.dataset.caption;
+    box.classList.add('open');
+    box.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+  }
+
+  function close(){
+    box.classList.remove('open');
+    box.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    image.src='';
+  }
+
+  items.forEach((item,i)=>item.addEventListener('click',()=>show(i)));
+
+  document.querySelector('.lightbox-close').addEventListener('click',close);
+  document.querySelector('.lightbox-prev').addEventListener('click',()=>show(current-1));
+  document.querySelector('.lightbox-next').addEventListener('click',()=>show(current+1));
+
+  box.addEventListener('click',e=>{
+    if(e.target===box) close();
+  });
+
+  document.addEventListener('keydown',e=>{
+    if(!box.classList.contains('open')) return;
+    if(e.key==='Escape') close();
+    if(e.key==='ArrowLeft') show(current-1);
+    if(e.key==='ArrowRight') show(current+1);
+  });
 })();
 </script>
 
