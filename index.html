@@ -63,6 +63,40 @@
  
 
 
+
+<section class="customer-reviews" id="reviews" aria-labelledby="reviews-title">
+  <div class="container">
+    <div class="reviews-heading">
+      <p class="eyebrow dark">KIND WORDS FROM OUR CLIENTS</p>
+      <h2 id="reviews-title">What Our <em>Customers Say</em></h2>
+      <p>Your experience matters to us. Read feedback from our customers or share your own.</p>
+    </div>
+    <div id="reviews-list" class="reviews-grid" aria-live="polite"></div>
+    <p id="reviews-empty" class="reviews-note" hidden>No published reviews yet. Be the first to share your experience!</p>
+    <div class="review-form-panel">
+      <div><p class="eyebrow dark">SHARE YOUR EXPERIENCE</p><h3>Leave a Review</h3><p>We appreciate your feedback. Reviews are checked before being published.</p></div>
+      <form id="customer-review-form">
+        <label for="review-name">YOUR NAME</label><input id="review-name" name="name" maxlength="80" autocomplete="name" required placeholder="Your name">
+        <fieldset class="review-rating"><legend>YOUR RATING</legend>
+          <div class="review-stars" role="radiogroup" aria-label="Star rating">
+            <label><input type="radio" name="rating" value="1" required><span>★</span><span class="sr-only">1 star</span></label>
+            <label><input type="radio" name="rating" value="2"><span>★</span><span class="sr-only">2 stars</span></label>
+            <label><input type="radio" name="rating" value="3"><span>★</span><span class="sr-only">3 stars</span></label>
+            <label><input type="radio" name="rating" value="4"><span>★</span><span class="sr-only">4 stars</span></label>
+            <label><input type="radio" name="rating" value="5"><span>★</span><span class="sr-only">5 stars</span></label>
+          </div>
+        </fieldset>
+        <label for="review-message">YOUR REVIEW</label><textarea id="review-message" name="message" maxlength="1500" minlength="15" rows="4" required placeholder="Tell us about your experience..."></textarea>
+        <div class="review-honeypot" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="gold-btn submit" type="submit">SUBMIT REVIEW <span aria-hidden="true">→</span></button>
+        <p id="review-form-status" class="reviews-note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<link rel="stylesheet" href="reviews.css?v=1">
+<script src="reviews.js" defer></script>
+
 <section class="contact" id="contact"><div class="container contact-grid">
   <div><p class="eyebrow">LET'S BUILD</p><h2>Ready to transform<br><em>your space?</em></h2><p>Tell us a little about your project and we'll be in touch.</p><div class="contact-details"><a href="tel:+19198575032">(919) 857-5032</a><a href="mailto:gerald.andinohomesolutions@gmail.com">gerald.andinohomesolutions@gmail.com</a><span>Raleigh, North Carolina</span></div></div>
   <form action="mailto:gerald.andinohomesolutions@gmail.com" method="post" enctype="text/plain"><label>NAME<input name="name" required placeholder="Your name"></label><label>EMAIL<input type="email" name="email" required placeholder="you@gmail.com"></label><label>PHONE<input name="phone" placeholder="(919) 000-0000"></label><label>WHAT CAN WE HELP WITH?<select name="service"><option>Remodeling</option><option>Carpentry</option><option>General Repairs</option><option>Trim Design</option></select></label><label>TELL US ABOUT YOUR PROJECT<textarea name="message" rows="4" placeholder="A few details about your project..."></textarea></label><button class="gold-btn submit">REQUEST A FREE ESTIMATE <span>→</span></button></form>
